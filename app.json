@@ -5,15 +5,4 @@
   "description": "Interactive jukebox app to demo Heroku basics",
   "repository": "https://github.com/heroku/dreamhouse-disco",
   "logo": "https://github.com/heroku/dreamhouse-disco/raw/master/images/disco-chat-logo.png",
-  "env": {},
-  "formation": {
-    "web": {
-      "quantity": 1
-    }
-  },
-  "buildpacks": [
-    {
-      "url": "https://github.com/heroku/heroku-buildpack-nodejs#yarn"
-    }
-  ]
 }
