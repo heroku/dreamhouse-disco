@@ -34,23 +34,8 @@ class Music extends Component {
     props.fetchConfig()
   }
 
-  componentWillMount() {
-    // Fetch user info
-    // if (this.props.config.fetched) {
-    //   const url = `${this.props.config.config.apiUrl}/api/disco_registration`
-    //   this.props.fetchAccount(url)
-    // }
-  }
-
   componentDidMount() {
     document.body.addEventListener('keydown', this.onKeyDown)
-
-    // Fetch playlist and re-fetch every 5 seconds
-    // if (this.props.config.fetched) {
-    //   const url = `${this.props.config.config.apiUrl}/api/spotify_playlist`
-    //   this.props.fetchPlaylist(url)
-    //   // this.playlistFetchTimer = setInterval(() => this.props.fetchPlaylist(), 5000)
-    // }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -63,6 +48,7 @@ class Music extends Component {
       // Fetch playlist
       const playlistUrl = `${nextProps.config.config.apiUrl}/api/spotify_playlist`
       this.props.fetchPlaylist(playlistUrl)
+      this.playlistFetchTimer = setInterval(() => this.props.fetchPlaylist(), 5000)
     }
   }
 
@@ -70,7 +56,7 @@ class Music extends Component {
     document.body.removeEventListener('keydown', this.onKeyDown)
 
     // Stop timer that triggers continuous playlist re-fetch
-    // clearInterval(this.playlistFetchTimer)
+    clearInterval(this.playlistFetchTimer)
   }
 
   handleKeyDown(e) {
