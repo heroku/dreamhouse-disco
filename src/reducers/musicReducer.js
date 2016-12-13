@@ -11,7 +11,7 @@ export default function reducer(state={
 }, action) {
   switch (action.type) {
     case 'FETCH_PLAYLIST': {
-      return {...state, fetching: true}
+      return {...state, fetching: true, fetched: false}
     }
 
     case 'FETCH_PLAYLIST_REJECTED': {

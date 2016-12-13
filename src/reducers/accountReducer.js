@@ -7,7 +7,7 @@ export default function reducer(state={
   switch (action.type) {
     // ACCOUNT INFO
     case 'FETCH_ACCOUNT': {
-      return {...state, fetching: true}
+      return {...state, fetching: true, fetched: false}
     }
     case 'FETCH_ACCOUNT_REJECTED': {
       return {...state, fetching: false, error: action.payload}
