@@ -9,10 +9,10 @@ export function login(data) {
   }
 }
 
-export function fetchAccount() {
+export function fetchAccount(accountUrl) {
   return function(dispatch) {
     dispatch({type: 'FETCH_ACCOUNT'})
-    return axios.get(`http://localhost:3001/api/disco_registration`)
+    return axios.get(accountUrl)
       .then((response) => {
         dispatch({type: 'FETCH_ACCOUNT_FULFILLED', payload: response.data})
       })

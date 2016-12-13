@@ -18,6 +18,14 @@ if (process.env.NODE_ENV === 'production') {
 
 app.use('/', express.static(path.resolve(__dirname, 'build')))
 
+app.get('/config', (req, res) => {
+  res.json(
+    {
+      apiUrl: process.env.TRAVOLTA_URL || `http://localhost:3001`,
+    }
+  )
+})
+
 // handle every other route with index.html, which will contain
 // a script tag to your application's JavaScript file(s).
 app.get('*', function (request, response){

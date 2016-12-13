@@ -1,8 +1,7 @@
 import axios from 'axios';
 
-export function fetchPlaylist() {
+export function fetchPlaylist(playlistUrl) {
   return function(dispatch) {
-    const playlistUrl = 'http://localhost:3001/api/spotify_playlist'
     dispatch({type: 'FETCH_PLAYLIST'})
     return axios.get(playlistUrl)
       .then((response) => {

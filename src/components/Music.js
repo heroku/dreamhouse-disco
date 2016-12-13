@@ -9,20 +9,18 @@ import logo from '../../images/disco-chat-logo.png'
 
 import { fetchPlaylist, nextTrack, togglePlay } from '../actions/musicActions'
 import { fetchAccount } from '../actions/accountActions'
+import { fetchConfig } from '../actions/configActions'
 
 const select = function(store, ownProps) {
-  const { account, music } = store
+  const { account, music, config } = store
   // if (_.isEmpty(music.music)) {
   //   music.music.tracks = {}
   //   music.music.tracks.items = []
   // }
   return {
     account,
-    // tracks: music.music.tracks.items,
-    music
-    // currentTrack: music.currentTrack,
-    // isPlaying: music.playing,
-    // currentTrackIndex: music.currentTrackIndex
+    music,
+    config
   }
 }
 
@@ -31,19 +29,41 @@ class Music extends Component {
   constructor(props) {
     super(props)
     this.onKeyDown = this.handleKeyDown.bind(this)
+
+    // get config
+    props.fetchConfig()
   }
 
   componentWillMount() {
     // Fetch user info
-    this.props.fetchAccount()
+    // if (this.props.config.fetched) {
+    //   const url = `${this.props.config.config.apiUrl}/api/disco_registration`
+    //   this.props.fetchAccount(url)
+    // }
   }
 
   componentDidMount() {
     document.body.addEventListener('keydown', this.onKeyDown)
 
     // Fetch playlist and re-fetch every 5 seconds
-    this.props.fetchPlaylist()
-    // this.playlistFetchTimer = setInterval(() => this.props.fetchPlaylist(), 5000)
+    // if (this.props.config.fetched) {
+    //   const url = `${this.props.config.config.apiUrl}/api/spotify_playlist`
+    //   this.props.fetchPlaylist(url)
+    //   // this.playlistFetchTimer = setInterval(() => this.props.fetchPlaylist(), 5000)
+    // }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.config.fetching && nextProps.config.fetched) {
+      console.log(this.props.config.config.apiUrl)
+      // Fetch user info
+      const accountUrl = `${nextProps.config.config.apiUrl}/api/disco_registration`
+      this.props.fetchAccount(accountUrl)
+
+      // Fetch playlist
+      const playlistUrl = `${nextProps.config.config.apiUrl}/api/spotify_playlist`
+      this.props.fetchPlaylist(playlistUrl)
+    }
   }
 
   componentWillUnmount() {
@@ -180,4 +200,4 @@ class Music extends Component {
   }
 }
 
-export default connect(select, { fetchPlaylist, nextTrack, togglePlay, fetchAccount })(Music);
+export default connect(select, { fetchPlaylist, nextTrack, togglePlay, fetchAccount, fetchConfig })(Music);
