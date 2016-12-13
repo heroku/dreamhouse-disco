@@ -1,0 +1,38 @@
+// ==========================================================================
+// Alert
+// ==========================================================================
+
+.alert {
+  margin: $pad auto;
+  border: $border;
+  border-radius: $border-radius-lg;
+  background: $off-white;
+  padding: $pad $pad-lg;
+
+  p {
+    margin: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  //- Alert States
+  &.alert-error {
+    color: white;
+    background: $error;
+    border-color: darken($error, 5%);
+  }
+
+  &.alert-valid {
+    color: white;
+    background: $valid;
+    border-color: darken($valid, 5%);
+  }
+
+  &.alert-warning {
+    color: white;
+    background: $orange;
+    border-color: darken($orange, 5%);
+  }
+}

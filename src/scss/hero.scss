@@ -1,0 +1,60 @@
+.hero {
+  background: url('../images/icon-background.png') repeat 0 0;
+  color: white;
+
+  h2, p {
+    margin-bottom: 15px;
+  }
+
+  .spotify-cta {
+    color: white;
+    font-weight: 100;
+
+    span {
+      width: 100px;
+      height: 30px;
+      margin-left: 5px;
+      display: inline-block;
+      vertical-align: middle;
+      background: url('../images/logo-spotify.png') no-repeat center center;
+      background-size: 100px 30px;
+      text-indent: -9999em;
+    }
+  }
+
+  .form-cta {
+    max-width: 92%;
+    margin: 30px auto 0;
+    display: block;
+  }
+}
+
+//- For smaller screens
+@media (max-width: $bp-small) {
+
+  .hero {
+    padding: 20px;
+  }
+
+  .hero-thanks {
+    margin-bottom: 25px;
+  }
+}
+
+//- For larger screens
+@media (min-width: $bp-small + 1) {
+
+  .hero {
+    @include display(flex);
+    padding: 40px;
+
+    .form-cta {
+      display: none;
+    }
+  }
+
+  .hero-thanks {
+    padding-right: 30px;
+    @include flex-basis(300px);
+  }
+}

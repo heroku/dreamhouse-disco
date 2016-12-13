@@ -1,0 +1,129 @@
+.playlist {
+  @include display(flex);
+  @include flex-direction(column);
+
+  .tracks {
+    padding: 25px;
+    @include flex(1 1 auto);
+    overflow: auto;
+    height: 100%;
+  }
+
+  .track {
+    padding: 15px 5px;
+    position: relative;
+    border-bottom: 1px solid #d6d6d6;
+    font-size: 15px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &.new:before {
+      content: 'NEW';
+      padding: 6px 10px;
+      position: absolute;
+      left: -50px;
+      top: 17px;
+      background: $color-blue;
+      border-radius: 3px;
+      font-size: 12px;
+      color: white;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .track-artwork {
+    width: 50px;
+    height: 50px;
+    padding-right: 10px;
+
+    img {
+      width: 100%;
+      margin-top: 5px;
+      border-radius: 2px;
+      box-shadow: 0 0 0 1px #ddd;
+    }
+  }
+
+  .track-title {
+    width: calc((60% - 50px));
+    padding-right: 30px;
+  }
+
+  .track-artist {
+    width: calc((40% - 50px));
+    padding-right: 15px;
+  }
+
+  .track-time {
+    width: 50px;
+    text-align: right;
+  }
+
+  footer {
+    padding: 10px 15px 20px;
+    @include display(flex);
+    @include justify-content(space-between);
+    background: #e7e7e7;
+  }
+
+  .track-count {
+    font-style: italic;
+
+    span {
+      margin-right: 3px;
+      padding: 3px 8px;
+      display: inline-block;
+      background: $color-blue;
+      border-radius: 3px;
+      font-style: normal;
+      font-weight: 400;
+      color: white;
+    }
+  }
+
+  .request-track {
+    text-align: right;
+    font-size: 15px;
+
+    .sms-number {
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #ccc;
+
+      span, strong {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+
+      strong {
+        font-size: 18px;
+      }
+    }
+
+    .alt-number {
+      margin-left: 10px;
+      display: inline-block;
+      font-style: italic;
+      opacity: .7;
+    }
+  }
+
+  .spotify-play {
+    padding: 25px;
+    height: 100%;
+
+    iframe {
+      border: none;
+      @media (max-width: $bp-medium) {
+        height: 600px;
+      }
+    }
+  }
+}

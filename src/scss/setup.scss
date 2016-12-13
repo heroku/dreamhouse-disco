@@ -1,0 +1,41 @@
+.setup {
+  margin: 20px;
+
+  .input-element {
+    margin: 20px 0;
+  }
+
+  input {
+      margin: 0;
+      padding: 0;
+      border: none;
+      display: inline-block;
+      width: 30%;
+      border: none;
+  }
+
+  input, span {
+      padding: 0;
+      margin: 0;
+  }
+
+  span.value {
+    border: 1px solid #999;
+    background-color: #eee;
+    padding: 3px;
+  }
+
+  .invalid {
+      outline-color: orangered !important;
+  }
+
+  .editable {
+      background-color: yellow;
+  }
+
+  .loading {
+      color: grey;
+      font-style: italic;
+      cursor: wait;
+  }
+}

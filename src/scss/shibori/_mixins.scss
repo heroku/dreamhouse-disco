@@ -1,0 +1,45 @@
+// ==========================================================================
+// Mixins (not provided by Bourbon)
+// ==========================================================================
+
+@mixin horizontal-line($position, $from: $white, $to: #ddd, $width: 2px, $inflection: 35%) {
+  @include background-image(linear-gradient(left, $from, $to 0% + $inflection, $to 100% - $inflection, $from));
+
+  background-position: $position center;
+  background-repeat: no-repeat;
+  background-size: 100% $width;
+}
+
+@mixin vertical-line($position, $from: $white, $to: #ddd, $width: 2px, $inflection: 35%) {
+  @include background-image(linear-gradient(top, $from, $to 0% + $inflection, $to 100% - $inflection, $from));
+
+  background-position: $position center;
+  background-repeat: no-repeat;
+  background-size: $width 100%;
+}
+
+.pad-{
+  &top {
+    padding-top: $pad;
+  }
+  &bottom {
+    padding-bottom: $pad;
+  }
+  &top-bottom {
+    padding-top: $pad;
+    padding-bottom: $pad;
+  }
+}
+
+.space-{
+  &top {
+    padding-top: $space;
+  }
+  &bottom {
+    padding-bottom: $space;
+  }
+  &top-bottom {
+    padding-top: $space;
+    padding-bottom: $space;
+  }
+}

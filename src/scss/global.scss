@@ -1,0 +1,84 @@
+/* //////////////////////////////////////// */
+/* ///               Global             /// */
+/* //////////////////////////////////////// */
+
+$color-slate: #17344e;
+$color-red: #7C1E16;
+$color-purple: #534A93;
+$color-blue: #048ec6;
+
+$link-color: $color-blue;
+
+$font-family: 'Source Sans Pro', sans-serif;
+
+$bp-small: 600px;
+$bp-medium: 750px;
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: white;
+  font-family: $font-family;
+  color: #333;
+}
+
+a {
+  color: $link-color;
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.button {
+  margin: 1em 0;
+  padding:  15px 30px;
+  display: inline-block;
+  background-color: $color-blue;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-blue, 10%);
+  }
+}
+
+.button-purple {
+  margin: 1em 0;
+  padding:  15px 30px;
+  display: inline-block;
+  background-color: $color-purple;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color-purple, 10%);
+  }
+}

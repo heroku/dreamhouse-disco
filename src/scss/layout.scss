@@ -1,0 +1,40 @@
+// * {
+//   @include box-sizing(border-box);
+// }
+
+//- For larger screens
+@media (min-width: $bp-medium + 1) {
+
+  .main.demo {
+    height: 100vh;
+    @include display(flex);
+    @include flex-direction(column);
+
+    header {
+      @include flex-basis(70px);
+    }
+
+    .playlist-container {
+      @include display(flex);
+      @include flex(1 1 auto);
+      height: calc(100vh - 70px);
+    }
+
+    .player,
+    .playlist {
+      @include flex(1);
+    }
+  }
+
+  .main.thanks {
+
+    .thanks-content {
+      padding: 20px 0;
+      @include display(flex);
+
+      .playlist { width: 55%; }
+      .form { width: 45%; }
+    }
+  }
+
+}

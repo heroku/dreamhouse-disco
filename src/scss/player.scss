@@ -1,0 +1,225 @@
+.demo .player {
+  padding: 30px;
+  background-image: linear-gradient(to top, rgba(22,52,78,.7), transparent),
+                    url('../images/icon-background.png');
+}
+
+.player {
+  @include display(flex);
+  @include justify-content(center);
+  @include align-items(center);
+  color: white;
+
+  h2 {
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 1px;
+  }
+
+  .track {
+    max-width: 270px;
+    position: relative;
+    background: rgba(255,255,255,.2);
+    border-radius: 3px;
+
+    &.now-playing {
+      margin-bottom: 40px;
+      padding: 15px;
+
+      img {
+        width: 100%;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      #track-controls {
+        position: relative;
+
+        a {
+          display: block;
+          position: absolute;
+          cursor: pointer;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        .track-play,
+        .track-pause {
+          width: 76px;
+          height: 76px;
+          left: 50%;
+          top: 50%;
+          margin-top: -38px;
+          margin-left: -38px;
+          background: no-repeat center center;
+          background-size: contain;
+          text-indent: -9999em;
+        }
+
+        .track-pause {
+          background-image: url('../images/audio-pause.svg');
+        }
+
+        .track-play {
+          background-image: url('../images/audio-play.svg');
+        }
+
+        .track-next {
+          width: 100%;
+          padding: 10px;
+          right: 0;
+          bottom: 0;
+          background: rgba(23,52,78,.8) url('../images/audio-next.svg') no-repeat 95% center;
+          text-transform: uppercase;
+          font-size: 12px;
+          color: white;
+        }
+      }
+
+      &.playing {
+
+        #track-controls a {
+          opacity: 0;
+          transition: .2s opacity;
+        }
+
+        &:hover {
+          #track-controls .track-next,
+          #track-controls .track-pause {
+            opacity: 1;
+          }
+        }
+      }
+
+      &.paused {
+
+        img {
+          opacity: .3;
+        }
+
+        #track-controls .track-pause,
+        #now-playing-icon {
+          display: none;
+        }
+      }
+
+      //- Blue audio icon animation
+      @include keyframes(audio) {
+        0% {
+          @include transform(translate(0,0));
+          opacity: 0;
+        }
+        30% {
+          opacity: 1;
+        }
+        100% {
+          @include transform(translate(5px,0));
+          opacity: 0;
+        }
+      }
+
+      //- Blue audio icon
+      #now-playing-icon {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: -20px;
+        top: -20px;
+
+        #audio-inner,
+        #audio-outer {
+          @include animation(audio 1.5s ease-in-out infinite);
+        }
+        #audio-inner,
+        #audio-outer {
+          @include animation(audio 1.5s ease-in-out infinite);
+        }
+
+      }
+
+      .track-title {
+        font-size: 17px;
+      }
+
+      .track-artist {
+        font-size: 14px;
+      }
+
+      @media screen and (max-height: 650px) {
+        min-height: 120px;
+        padding: 10px 20px 28px 120px;
+        position: relative;
+
+        #track-controls {
+          width: 100px;
+          position: absolute;
+          left: 10px;
+          top: 10px;
+
+          .track-play,
+          .track-pause {
+            width: 50px;
+            height: 50px;
+            margin-top: -25px;
+            margin-left: -25px;
+          }
+
+          .track-next {
+            width: 14px;
+            height: 13px;
+            padding: 0;
+            right: -25px;
+            bottom: 10px;
+            background-color: transparent;
+            background-position: center center;
+            text-indent: -9999em;
+          }
+        }
+      }
+
+    }
+
+    &.on-deck,
+    &.submitted {
+      min-height: 120px;
+      padding: 10px 20px 10px 120px;
+      position: relative;
+
+      img {
+        width: 100px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+      }
+
+      .track-title {
+        font-size: 16px;
+      }
+
+      .track-artist {
+        font-size: 12px;
+      }
+    }
+
+    .track-title,
+    .track-artist {
+      display: block;
+    }
+
+    .track-title {
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+
+    .track-artist {
+      opacity: .8;
+    }
+
+  }
+
+}

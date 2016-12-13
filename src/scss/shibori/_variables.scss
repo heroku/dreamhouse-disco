@@ -1,0 +1,87 @@
+// ==========================================================================
+// Variables
+// ==========================================================================
+
+$asset-pipeline: false;
+$image-path: '/images';
+
+//- Spacing
+$space: 30px;
+$pad-xl: $space;
+$pad-lg: 20px;
+$pad: ceil($space/3);
+$pad-sm: ceil($space/6);
+
+//- Typography
+$font-base: 14px;
+$font-xxl: 24px;
+$font-xl: 18px;
+$font-lg: 16px;
+$font-sm: 13px;
+$font-xs: 10px;
+
+$font-h1: 36px;
+$font-h2: 30px;
+$font-h3: 24px;
+$font-h4: 20px;
+$font-h5: 16px;
+$font-h6: 14px;
+
+$line-height-base: 1.5;
+$line-height-sm: 1.2;
+
+//- Fonts
+$font-main: "BentonSans", "Helvetica Neue", sans-serif;
+$font-mono: "Inconsolata", monospace;
+
+//- Font Weights
+$font-light: 100;
+$font-normal: normal;
+$font-bold: bold;
+
+//- Layout
+$grid-full: 100%;
+$grid-large-screen: 1200px;
+$grid-desktop: 95%;
+$grid-tablet: 95%;
+$grid-mobile: 95%;
+
+//- Wrapper sizes
+$wrapper-sm: 800px;
+$wrapper-md: 960px;
+$wrapper-lg: 1080px;
+
+//- Z-index
+$z-foreground: 200;
+$z-middleground: 100;
+$z-default: 0;
+$z-background: -100;
+
+//- Borders
+$border-color: #d3d3d3;
+$border: 1px solid $border-color;
+
+$border-radius: 3px;
+$border-radius-sm: $border-radius - 2;
+$border-radius-lg: $border-radius + 2;
+$border-radius-circle: 50%;
+
+$box-shadow: 0 2px 4px 0 fade-out($black, .88);
+
+//- Breakpoints
+$bp-xs: 480px;
+$bp-sm: 600px;
+$bp-med: 768px;
+$bp-lg: 1100px;
+$bp-xl: 1400px;
+
+$tablet: $bp-med;
+
+//-Aniamtion
+$transition: .1s linear;
+
+//- Icon Sizing
+$brand-icon: 48px;
+$brand-icon-xs: 24px;
+$brand-icon-sm: 36px;
+$brand-icon-lg: 64px;

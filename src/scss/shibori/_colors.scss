@@ -1,0 +1,189 @@
+// ==========================================================================
+// Colors
+// ==========================================================================
+
+//- Monochromatic
+$white: #fff;
+$off-white: #F9F9FB;
+
+$gray-lighter: #EEF1F6;
+$gray-light: #CFD7E6;
+$gray: #96A3B6;
+$gray-dark: #596981;
+$gray-darker: #3F3F44;
+
+$gray-border: #D8DDE6;
+$black: #111;
+
+//- Mains
+$purple: #79589F;
+$purple-light: lighten(#79589F, 20%);
+$blue: #408FEC;
+$green: #74C080;
+$orange: #FA9F47;
+$red: #D64242;
+
+//- Brand
+$brand-primary: $purple;
+$brand-primary-light: $purple-light;
+$brand-info: $blue;
+$brand-success: $green;
+$brand-warning: $orange;
+$brand-danger: $red;
+
+
+.swatch-white {
+  background: $white;
+}
+.swatch-off-white {
+  background: $off-white;
+}
+.swatch-gray-lighter {
+  background: $gray-lighter;
+}
+.swatch-gray-light {
+  background: $gray-light;
+}
+.swatch-gray {
+  background: $gray;
+}
+.swatch-gray-dark {
+  background: $gray-dark;
+}
+.swatch-gray-darker {
+  background: $gray-darker;
+}
+.swatch-black {
+  background: $black;
+}
+.swatch-brand-primary {
+  background: $brand-primary;
+}
+.swatch-brand-primary-light {
+  background: $brand-primary-light;
+}
+.swatch-brand-info {
+  background: $brand-info;
+}
+.swatch-brand-success {
+  background: $brand-success;
+}
+.swatch-brand-warning {
+  background: $brand-warning;
+}
+.swatch-brand-danger {
+  background: $brand-danger;
+}
+
+//- Utility
+$dim: fade-out($black, .5);
+$dimmer: fade-out($black, .2);
+$error: $brand-danger;
+$valid: $brand-success;
+$info: $brand-info;
+$warning: $brand-warning;
+
+$brand-facebook: #03539e;
+$brand-twitter: #35ccff;
+$brand-linkedin: #217bc1;
+
+$text-color: $gray-darker;
+$text-color-light: $gray-dark;
+$text-color-white: $white;
+$text-color-purple: $purple;
+
+//- Gradients
+
+$grad-purple: #58488a;
+$grad-purple-blue: #5d64d0;
+
+@mixin gradient-brand-primary() {
+  @include linear-gradient(to right bottom, #AB8ECD, $brand-primary, $fallback: $brand-primary);
+}
+
+@mixin gradient-gray-light() {
+  @include linear-gradient(to right bottom, #DAE0EC, $gray-light, $fallback: $gray-light);
+}
+
+@mixin gradient-gray() {
+  @include linear-gradient(to right bottom, #AFB9C7, $gray, $fallback: $gray);
+}
+
+@mixin gradient-gray-dark() {
+  @include linear-gradient(to right bottom, #828EA0, $gray-dark, $fallback: $gray-dark);
+}
+
+@mixin gradient-gray-darker() {
+  @include linear-gradient(to right bottom, #6E6E72, $gray-darker, $fallback: $gray-darker);
+}
+
+@mixin gradient-brand-info() {
+  @include linear-gradient(to right bottom, #A1CAF9, $brand-info, $fallback: $brand-info);
+}
+
+@mixin gradient-brand-success() {
+  @include linear-gradient(to right bottom, #ADE28F, $brand-success, $fallback: $brand-success);
+}
+
+@mixin gradient-brand-warning() {
+  @include linear-gradient(to right bottom, #FFD3A0, $brand-warning, $fallback: $brand-warning);
+}
+
+@mixin gradient-brand-danger() {
+  @include linear-gradient(to right bottom, #F37A65, $brand-danger, $fallback: $brand-danger);
+}
+
+.swatch-gradient-brand-primary {
+  @include gradient-brand-primary;
+}
+.swatch-gradient-gray-light {
+  @include gradient-gray-light;
+}
+.swatch-gradient-gray {
+  @include gradient-gray;
+}
+.swatch-gradient-gray-dark {
+  @include gradient-gray-dark;
+}
+.swatch-gradient-gray-darker {
+  @include gradient-gray-darker;
+}
+.swatch-gradient-brand-info {
+  @include gradient-brand-info;
+}
+.swatch-gradient-brand-success {
+  @include gradient-brand-success;
+}
+.swatch-gradient-brand-warning {
+  @include gradient-brand-warning;
+}
+.swatch-gradient-brand-danger {
+  @include gradient-brand-danger;
+}
+
+@mixin grad-purple() {
+  @include linear-gradient(to bottom, $grad-purple, $grad-purple-blue, $fallback: $grad-purple);
+}
+
+@mixin grad-purple-dark() {
+  @include linear-gradient(to bottom, #4A4090, #372E6C, $fallback: #4A4090);
+}
+
+@mixin grad-gray-light() {
+  @include linear-gradient(top, fade-out($gray-lighter, .5), $white 50%, $fallback: $white);
+}
+
+@mixin beta() {
+  @include linear-gradient(to right, saturate(#78B743, 10%), #78B743, $fallback: #78B743);
+}
+
+@mixin addons() {
+  @include linear-gradient(to right, saturate(#78B743, 10%), #78B743, $fallback: #78B743);
+}
+@mixin buttons() {
+  @include linear-gradient(to right, saturate(#78B743, 10%), #78B743, $fallback: #78B743);
+}
+
+@mixin buildpacks() {
+  @include linear-gradient(to right, #B4EC51, #429321, $fallback: #B4EC51);
+}
