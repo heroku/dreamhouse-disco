@@ -26,7 +26,7 @@ export default function reducer(state={
         music: action.payload
       }
 
-      let currentTrack = _.get(action, `payload.items[${state.currentTrackIndex}].track.preview_url`)
+      let currentTrack = _.get(action, `payload.tracks.items[${state.currentTrackIndex}].track.preview_url`)
       if (currentTrack) {
         newState.currentTrack = currentTrack.slice(0)
       }
@@ -35,7 +35,7 @@ export default function reducer(state={
 
     case 'NEXT_TRACK': {
       let newState = {...state}
-      let tracks = state.music.items
+      let tracks = state.music.tracks.items
       if (state.currentTrackIndex < tracks.length-1) {
         newState.currentTrackIndex++
         newState.currentTrack = tracks[newState.currentTrackIndex].track.preview_url.slice(0)

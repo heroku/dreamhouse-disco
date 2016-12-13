@@ -99,7 +99,7 @@ class Music extends Component {
 
     let trackItems, currentTrackIndex, upNextTrack, nowPlayingTrack, tracks
     if (this.props.music.fetched) {
-      trackItems = this.props.music.music.items
+      trackItems = this.props.music.music.tracks.items
       currentTrackIndex = this.props.music.currentTrackIndex
       upNextTrack = trackItems.length > currentTrackIndex + 1 ? trackItems[currentTrackIndex + 1] : null
       nowPlayingTrack = trackItems.length > currentTrackIndex ? trackItems[currentTrackIndex] : null
