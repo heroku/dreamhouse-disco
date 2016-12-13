@@ -25,8 +25,8 @@ const UserIsAuthenticated = UserAuthWrapper({
   redirectAction: routerActions.replace,
   wrapperDisplayName: 'UserIsAuthenticated',
   predicate: ({ referrer }) => {
-    // console.log('REFERRER',referrer)
-    // console.log('CURRENT HOSTNAME',`${document.location.protocol}//${document.location.host}`)
+    console.log('REFERRER',referrer)
+    console.log('CURRENT HOSTNAME',`${document.location.protocol}//${document.location.host}`)
     return _.startsWith(referrer, `${document.location.protocol}//${document.location.host}`)
   }
 })
