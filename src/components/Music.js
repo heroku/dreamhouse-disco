@@ -164,18 +164,18 @@ class Music extends Component {
               { tracks }
             </ol>
             <footer>
-              <div className='track-count'><span>{ tracks && tracks.length }</span> tracks</div>
+              <div className='track-count'><span>{ (tracks && tracks.length) || 0 }</span> tracks</div>
               <div className='request-track'>
                 <div className='sms-number'>
                   <span>text a track to </span>
-                  <strong>{ phone_number }</strong>
+                  <strong>{ phone_number || '(---) --- ---' }</strong>
                 </div>
                 <div className='fb-bot'>
                   <p>request a track via <a target='_blank' href='https://www.facebook.com/dreamhousedisco'>fb.me/dreamhousedisco</a></p>
-                  <small>You are in the <strong>{ room_name && room_name.toUpperCase() }</strong></small>
+                  <small>You are in the <strong>{ (room_name && room_name.toUpperCase()) || '---------' }</strong></small>
                 </div>
                 <div className='chatter-bot'>
-                  <p>request a track via <a target='_blank' href={ 'https://' + salesforce_org + '-dev-ed.lightning.force.com' }>chatter on salesforce.com</a></p>
+                  <p>request a track via <a target='_blank' href={ salesforce_org && 'https://' + salesforce_org + '-dev-ed.lightning.force.com' }>chatter on salesforce.com</a></p>
                 </div>
               </div>
             </footer>
