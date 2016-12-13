@@ -21,7 +21,7 @@ app.use('/', express.static(path.resolve(__dirname, 'build')))
 app.get('/config', (req, res) => {
   res.json(
     {
-      apiUrl: process.env.TRAVOLTA_URL || `http://localhost:3001`,
+      apiUrl: process.env.TRAVOLTA_URL || `https://disco-test-server.herokuapp.com`,
     }
   )
 })
