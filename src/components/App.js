@@ -47,7 +47,7 @@ class App extends Component {
           </div>
           <p className='tagline'>Your Party Built this Playlist</p>
           { this.props.config.fetched &&
-            <a href={ `${this.props.config.config.apiUrl}/api/auth` } className='button'>Get started!</a>
+            <a href={ `${this.props.config.config.apiUrl}/api/auth?next=${document.location.origin}/#/music` } className='button'>Get started!</a>
           }
         </div>
       </div>
