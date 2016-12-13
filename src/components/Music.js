@@ -48,7 +48,7 @@ class Music extends Component {
       // Fetch playlist
       const playlistUrl = `${nextProps.config.config.apiUrl}/api/spotify_playlist`
       this.props.fetchPlaylist(playlistUrl)
-      this.playlistFetchTimer = setInterval(() => this.props.fetchPlaylist(), 5000)
+      this.playlistFetchTimer = setInterval(() => this.props.fetchPlaylist(playlistUrl), 5000)
     }
   }
 
