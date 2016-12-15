@@ -846,7 +846,7 @@ header {
     width: 50px;
     text-align: right; }
   .playlist footer {
-    padding: 10px 15px 20px;
+    padding: 10px 15px 50px;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -877,7 +877,7 @@ header {
       color: white; }
   .playlist .request-track {
     text-align: right;
-    font-size: 15px; }
+    font-size: 20px; }
     .playlist .request-track .sms-number {
       margin-bottom: 5px;
       padding-bottom: 5px;
@@ -887,7 +887,7 @@ header {
         vertical-align: middle;
         margin-left: 10px; }
       .playlist .request-track .sms-number strong {
-        font-size: 18px; }
+        font-size: 32px; }
     .playlist .request-track .alt-number {
       margin-left: 10px;
       display: inline-block;
