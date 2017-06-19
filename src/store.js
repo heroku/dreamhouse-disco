@@ -14,6 +14,6 @@ if (process.env.DEBUG == 'true') {
   middleware.push(logger());
 }
 
-middleware.push(routherMiddleware(hashHistory));
+middleware.push(routerMiddleware(hashHistory));
 
 export default createStore(reducer, applyMiddleware(middleware));
