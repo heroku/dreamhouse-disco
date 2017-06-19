@@ -8,12 +8,10 @@ import { routerMiddleware } from 'react-router-redux';
 
 import reducer from './reducers';
 
-var middleware = [promise(), thunk()];
+const middleware = applyMiddleware(
+    promise(),
+    thunk,
+    routerMiddleware(hashHistory)
+  );
 
-if (process.env.DEBUG == 'true') {
-  middleware.push(logger());
-}
-
-middleware.push(routerMiddleware(hashHistory));
-
-export default createStore(reducer, applyMiddleware(middleware));
+export default createStore(reducer, middleware);
