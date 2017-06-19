@@ -40,7 +40,7 @@ class Music extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (this.props.config.fetching && nextProps.config.fetched) {
-      console.log(this.props.config.config.apiUrl)
+      // console.log(this.props.config.config.apiUrl)
       // Fetch user info
       const accountUrl = `${nextProps.config.config.apiUrl}/api/disco_registration`
       this.props.fetchAccount(accountUrl)
