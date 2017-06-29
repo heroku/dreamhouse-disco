@@ -48,7 +48,7 @@ class App extends Component {
           <p className='tagline'>Your Party Built this Playlist</p>
           { this.props.config.fetched &&
             <a href={ `${this.props.config.config.apiUrl}/auth/spotify?origin=${document.location.origin}/#/music` }
-               className='button-purple'>
+               className='button'>
               Get started!
             </a>
           }
