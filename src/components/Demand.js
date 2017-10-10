@@ -34,7 +34,7 @@ class Demand extends Component {
   componentDidMount() {
     document.body.addEventListener('keydown', this.onKeyDown)
 
-    this.timeout = setInterval(() => this.handleDisplayNumber(), 10000)
+    this.timeout = setInterval(() => this.handleDisplayNumber(), 30000)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -60,8 +60,10 @@ class Demand extends Component {
   }
   
   handleDisplayNumber() {
-    this.displayNumber = true
-    setTimeout(() => this.displayNumber = false, 5000)
+    if(this.props.music.music.tracks.items.length <= 0) {
+      this.displayNumber = true
+      setTimeout(() => this.displayNumber = false, 5000)
+    }
   }
 
   handleKeyDown(e) {
@@ -125,7 +127,7 @@ class Demand extends Component {
               onEnded={ () => this.props.nextTrack() }
             />
           </div>
-          <p className='byline'>a demo app running on <a href='https://www.heroku.com/' className='logo-heroku'>Heroku</a></p>
+          <p className='byline'>a demo app running on <a href='https://www.heroku.com/' className='logo-salesforce-heroku'>Salesforce Heroku</a></p>
         </header>
 
         <div className='playlist-container'>
@@ -144,7 +146,7 @@ class Demand extends Component {
             </footer>
           </div>
         </div>
-      <div className={`big-number demand ${this.displayNumber ? 'display-big-number' : ''}`}>
+      <div className={`demand big-number ${this.displayNumber ? 'display-big-number' : ''}`}>
           <span>Text a track to </span>
           <strong>{ phone_number || '(---) --- ---' }</strong>
         </div>

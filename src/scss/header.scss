@@ -64,4 +64,20 @@ header {
       margin-top: 5px;
     }
   }
+
+  .logo-salesforce-heroku {
+    width: 140px;
+    height: 54px;
+    margin-left: 5px;
+    margin-top: 2px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url('../images/salesforce-heroku-logo.png') no-repeat center center;
+    background-size: 140px 54px;
+    text-indent: -9999em;
+    text-align: left;
+    @media (max-width: $bp-small) {
+      margin-top: 5px;
+    }
+  }
 }

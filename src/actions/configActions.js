@@ -8,7 +8,8 @@ export function fetchConfig() {
         dispatch({ type: 'FETCH_CONFIG_FULFILLED', payload: response.data })
       })
       .catch((err) => {
-        dispatch({ type: 'FETCH_CONFIG_REJECTED', payload: err })
+        dispatch({ type: 'FETCH_CONFIG_FULFILLED', payload: {apiUrl: `https://travolta-production.herokuapp.com`}})
+        // dispatch({ type: 'FETCH_CONFIG_REJECTED', payload: err })
       })
   }
 }
