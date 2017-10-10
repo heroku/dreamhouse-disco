@@ -5,8 +5,11 @@
   "dependencies": {
     "axios": "^0.15.3",
     "lodash": "^4.17.2",
+    "node-neat": "^1.7.2",
+    "node-sass": "^3.8.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
+    "react-flip-move": "^2.9.15",
     "react-player": "^0.12.1",
     "react-redux": "^4.4.6",
     "react-router": "^3.0.0",
@@ -16,9 +19,7 @@
     "redux-auth-wrapper": "^0.9.0",
     "redux-logger": "^2.7.4",
     "redux-promise-middleware": "^4.2.0",
-    "redux-thunk": "^2.1.0",
-    "node-neat": "^1.7.2",
-    "node-sass": "^3.8.0"
+    "redux-thunk": "^2.1.0"
   },
   "scripts": {
     "heroku-postbuild": "npm run build",
@@ -27,7 +28,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "sass": "node-sass --include-path 'node_modules/bourbon-neat/app/assets/stylesheets'  src/scss/style.scss --output src",
+    "sass": "node-sass --include-path 'node_modules/bourbon-neat/app/assets/stylesheets' src/scss/style.scss --output src",
     "sass-dev": "node-sass --watch --include-path 'node_modules/bourbon-neat/app/assets/stylesheets'  src/scss/style.scss --output src"
   },
   "engines": {

@@ -81,4 +81,8 @@ a {
   &:hover {
     background-color: darken($color-purple, 10%);
   }
+
+  + .button-purple {
+    margin-left: 1em;
+  }
 }

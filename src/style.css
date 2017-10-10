@@ -329,13 +329,12 @@ a {
   cursor: pointer; }
   .button-purple:hover {
     background-color: #403971; }
+  .button-purple + .button-purple {
+    margin-left: 1em; }
 
 @media (min-width: 751px) {
   .main.demo {
     height: 100vh;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -353,9 +352,6 @@ a {
       flex-basis: 70px;
       -ms-flex-preferred-size: 70px; }
     .main.demo .playlist-container {
-      display: -webkit-box;
-      display: -moz-box;
-      display: box;
       display: -webkit-flex;
       display: -moz-flex;
       display: -ms-flexbox;
@@ -379,9 +375,6 @@ a {
       flex: 1; }
   .main.thanks .thanks-content {
     padding: 20px 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -393,9 +386,6 @@ a {
 
 .main.login {
   height: 100vh;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -448,9 +438,6 @@ a {
     font-weight: 100; }
 
 header {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -478,9 +465,6 @@ header {
   background: #17344e;
   color: white; }
   header .logo {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -580,9 +564,6 @@ header {
 
 @media (min-width: 601px) {
   .hero {
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -602,9 +583,6 @@ header {
   background-image: linear-gradient(to top, rgba(22, 52, 78, 0.7), transparent), url("../images/icon-background.png"); }
 
 .player {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -796,9 +774,6 @@ header {
       opacity: .8; }
 
 .playlist {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -811,7 +786,6 @@ header {
   flex-direction: column;
   -ms-flex-direction: column; }
   .playlist .tracks {
-    padding: 25px;
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     box-flex: 1;
@@ -822,12 +796,17 @@ header {
     overflow: auto;
     height: 100%; }
   .playlist .track {
-    padding: 15px 5px;
+    padding: 15px;
     position: relative;
     border-bottom: 1px solid #d6d6d6;
-    font-size: 15px; }
-    .playlist .track:first-child {
-      padding-top: 0; }
+    font-size: 15px;
+    -webkit-transition: padding 1s;
+    -moz-transition: padding 1s;
+    transition: padding 1s; }
+    .playlist .track.currently-playing {
+      background: #f7f7f7;
+      padding-top: 50px;
+      padding-bottom: 50px; }
     .playlist .track.new:before {
       content: 'NEW';
       padding: 6px 10px;
@@ -861,9 +840,6 @@ header {
     text-align: right; }
   .playlist footer {
     padding: 10px 15px 50px;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
@@ -971,9 +947,6 @@ header {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;
@@ -1032,9 +1005,6 @@ form small {
 
 .products {
   margin-top: 40px;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flexbox;

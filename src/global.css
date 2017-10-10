@@ -40,3 +40,21 @@ a {
   cursor: pointer; }
   .button:hover {
     background-color: #036a94; }
+
+.button-purple {
+  margin: 1em 0;
+  padding: 15px 30px;
+  display: inline-block;
+  background-color: #534A93;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  cursor: pointer; }
+  .button-purple:hover {
+    background-color: #403971; }
+  .button-purple + .button-purple {
+    margin-left: 1em; }

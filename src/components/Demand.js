@@ -11,6 +11,8 @@ import { fetchPlaylist, nextTrack, togglePlay } from '../actions/musicActions'
 import { fetchAccount } from '../actions/accountActions'
 import { fetchConfig } from '../actions/configActions'
 
+import FlipMove from 'react-flip-move'
+
 const select = function(store, ownProps) {
   const { account, music, config } = store
 
@@ -26,6 +28,7 @@ class Demand extends Component {
     super(props)
     this.displayNumber = false
     this.onKeyDown = this.handleKeyDown.bind(this)
+    this.fetchingComplete = false
 
     // get config
     props.fetchConfig()
@@ -38,10 +41,12 @@ class Demand extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (this.props.config.fetching && nextProps.config.fetched) {
+    if (!this.fetchingComplete && nextProps.config.fetched) {
+      this.fetchingComplete = true
       // console.log(this.props.config.config.apiUrl)
       // Fetch user info
       const accountUrl = `${nextProps.config.config.apiUrl}/api/disco_registration`
+      console.log(accountUrl)
       this.props.fetchAccount(accountUrl)
 
       // Fetch playlist
@@ -60,9 +65,9 @@ class Demand extends Component {
   }
   
   handleDisplayNumber() {
-    if(this.props.music.music.tracks.items.length <= 0) {
+    if(this.props.config.fetched && this.props.music.music.tracks.items.length <= 0) {
       this.displayNumber = true
-      setTimeout(() => this.displayNumber = false, 5000)
+      setTimeout(() => this.displayNumber = false, 10000)
     }
   }
 
@@ -85,29 +90,28 @@ class Demand extends Component {
   }
 
   render() {
-    let phone_number, room_name, salesforce_org
+    let phone_number
     if (this.props.account.fetched) {
-      ({ phone_number, room_name, salesforce_org } = this.props.account.account)
+      ({ phone_number } = this.props.account.account)
     }
 
-    let trackItems, currentTrackIndex, upNextTrack, nowPlayingTrack, tracks
+    let trackItems, currentTrackIndex, tracks
     if (this.props.music.fetched) {
       trackItems = this.props.music.music.tracks.items
       currentTrackIndex = this.props.music.currentTrackIndex
-      upNextTrack = trackItems.length > currentTrackIndex + 1 ? trackItems[currentTrackIndex + 1] : null
-      nowPlayingTrack = trackItems.length > currentTrackIndex ? trackItems[currentTrackIndex] : null
 
-      tracks = _.map(trackItems.slice(currentTrackIndex + 2), (track) => {
-        return <Track
-          key={ track.track.id + track.added_at }
-          track={ track.track }
-          />
-      }).reverse()
+      tracks = <FlipMove duration={750} easing="ease-out" appearAnimation="accordionVertical" enterAnimation="accordianVertical" staggerDelayBy="300">
+        {_.map(trackItems, (track) => {
+          return <Track
+            key={ track.track.id + track.added_at }
+            track={ track.track }
+            currentlyPlaying={ this.props.music.music.tracks.items.indexOf(track) == currentTrackIndex }
+            />
+        })}
+      </FlipMove>
     }
 
     let isPlaying = this.props.music.playing
-    let playingClass = isPlaying ? 'playing' : 'paused'
-    let playingText  = isPlaying ? 'Now Playing' : 'Paused'
 
     return (
       <div className='main demo' onKeyDown={ this.handleKeyDown }>

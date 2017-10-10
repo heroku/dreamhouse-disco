@@ -14,6 +14,16 @@ Interactive jukebox app to demo Heroku basics
 
 ### Run locally
 
+*Please note SASS is not automatically compiled.
+
+```
+git clone git@github.com:heroku/dreamhouse-disco.git
+npm install
+npm run start-dev
+```
+
+Run production:
+
 *Replace the value of `TRAVOLTA_URL` below with your Travolta.*
 
 ```
@@ -22,11 +32,16 @@ npm install
 npm run build
 TRAVOLTA_URL="http://localhost:3000" npm start
 ```
-*NOTE: `npm run start-dev` does not work right now.*
 
 ### Sass
 
-To watch the `.scss` files:
+To build the `.scss` files:
+
+```
+npm run sass
+```
+
+To watch `.scss` files:
 
 ```
 npm run sass-dev

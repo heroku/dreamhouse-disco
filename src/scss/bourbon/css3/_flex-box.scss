@@ -66,12 +66,6 @@
 @mixin display($value) {
 // flex | inline-flex
   @if $value == "flex" {
-    // 2009
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-
-    // 2012
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox; // 2011 (IE 10)
