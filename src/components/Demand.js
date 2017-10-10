@@ -52,7 +52,12 @@ class Demand extends Component {
       // Fetch playlist
       const playlistUrl = `${nextProps.config.config.apiUrl}/api/spotify_playlist`
       this.props.fetchPlaylist(playlistUrl)
-      this.playlistFetchTimer = setInterval(() => this.props.fetchPlaylist(playlistUrl), 5000)
+      this.playlistFetchTimer = setInterval(() => {
+        this.props.fetchPlaylist(playlistUrl)
+        if(this.props.music.music.tracks.items.length > 0) {
+          this.displayNumber = false
+        }
+      }, 5000)
     }
   }
 
@@ -67,7 +72,6 @@ class Demand extends Component {
   handleDisplayNumber() {
     if(this.props.config.fetched && this.props.music.music.tracks.items.length <= 0) {
       this.displayNumber = true
-      setTimeout(() => this.displayNumber = false, 10000)
     }
   }
 
@@ -100,12 +104,12 @@ class Demand extends Component {
       trackItems = this.props.music.music.tracks.items
       currentTrackIndex = this.props.music.currentTrackIndex
 
-      tracks = <FlipMove duration={750} easing="ease-out" appearAnimation="accordionVertical" enterAnimation="accordianVertical" staggerDelayBy="300">
+      tracks = <FlipMove duration={500} easing="ease-out" appearAnimation="fade" enterAnimation="fade" staggerDelayBy="250">
         {_.map(trackItems, (track) => {
           return <Track
             key={ track.track.id + track.added_at }
             track={ track.track }
-            currentlyPlaying={ this.props.music.music.tracks.items.indexOf(track) == currentTrackIndex }
+            currentlyPlaying={ this.props.music.music.tracks.items.indexOf(track) === currentTrackIndex }
             />
         })}
       </FlipMove>
@@ -119,7 +123,7 @@ class Demand extends Component {
         <header>
           <a href='#' className='logo'>
             <img src={ logo } alt='Smiley face'/>
-            <h1>Dreamhouse<strong>Disco</strong></h1>
+            <h1>Heroku <strong>DJ</strong></h1>
           </a>
           <div id="audio-player">
             <ReactPlayer

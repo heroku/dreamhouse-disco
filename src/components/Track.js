@@ -15,7 +15,7 @@ class Track extends React.Component {
     const { track } = this.props
    // console.log(track.name, upNow, upNext)
     return (
-      <li className={`track ${this.props.currentlyPlaying ? 'currently-playing' : ''}`} id={ track.key }>
+      <li className='track' id={ track.key }>
         <span className='track-artwork'>
           <img src={ track.album.images[0].url } alt={ track.album.name }/>
         </span>

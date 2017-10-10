@@ -12,14 +12,7 @@
     padding: 15px;
     position: relative;
     border-bottom: 1px solid #d6d6d6;
-    font-size: 15px;
     @include transition(padding 1s);
-
-    &.currently-playing {
-      background: #f7f7f7;
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
 
     &.new:before {
       content: 'NEW';
@@ -136,13 +129,27 @@
       position: relative;
       background-image: linear-gradient(#f7f7f7, #fff);
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.2);
+      padding-bottom: 15px;
+    }
+
+    .track {
+      font-size: 20px;
+      &.currently-playing {
+        background: #f7f7f7;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        font-weight: bold;
+      }
     }
     
     .track-count {
       font-style: italic;
       position: absolute;
-      bottom: 10px;
-      right: 10px;
+      top: -36px;
+      right: 0;
+      border-radius: 3px 0 0 0;
+      padding: 5px 10px 5px 5px;
+      background: #ccc;
       span {
         margin-right: 3px;
         padding: 3px 8px;
