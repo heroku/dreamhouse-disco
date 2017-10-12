@@ -1,13 +1,12 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import ReactPlayer from 'react-player'
 
 import Track from './Track';
 
 import logo from '../../images/disco-chat-logo.png'
 
-import { fetchPlaylist, nextTrack, togglePlay } from '../actions/musicActions'
+import { fetchPlaylist } from '../actions/musicActions'
 import { fetchAccount } from '../actions/accountActions'
 import { fetchConfig } from '../actions/configActions'
 
@@ -27,7 +26,6 @@ class Demand extends Component {
   constructor(props) {
     super(props)
     this.displayNumber = false
-    this.onKeyDown = this.handleKeyDown.bind(this)
     this.fetchingComplete = false
 
     // get config
@@ -35,8 +33,6 @@ class Demand extends Component {
   }
 
   componentDidMount() {
-    document.body.addEventListener('keydown', this.onKeyDown)
-
     this.timeout = setInterval(() => this.handleDisplayNumber(), 30000)
   }
 
@@ -62,8 +58,6 @@ class Demand extends Component {
   }
 
   componentWillUnmount() {
-    document.body.removeEventListener('keydown', this.onKeyDown)
-
     // Stop timer that triggers continuous playlist re-fetch
     clearInterval(this.playlistFetchTimer)
     clearInterval(this.timeout)
@@ -72,24 +66,6 @@ class Demand extends Component {
   handleDisplayNumber() {
     if(this.props.config.fetched && this.props.music.music.tracks.items.length <= 0) {
       this.displayNumber = true
-    }
-  }
-
-  handleKeyDown(e) {
-
-    switch (e.keyCode) {
-      case 32: { // space
-        this.props.togglePlay()
-        e.preventDefault()
-        break
-      }
-      case 39: { // right arrow
-        this.props.nextTrack()
-        e.preventDefault()
-        break
-      }
-      default: {
-      }
     }
   }
 
@@ -109,32 +85,18 @@ class Demand extends Component {
           return <Track
             key={ track.track.id + track.added_at }
             track={ track.track }
-            currentlyPlaying={ this.props.music.music.tracks.items.indexOf(track) === currentTrackIndex }
             />
         })}
       </FlipMove>
     }
 
-    let isPlaying = this.props.music.playing
-
     return (
-      <div className='main demo' onKeyDown={ this.handleKeyDown }>
-
+      <div className='main demo'>
         <header>
           <a href='#' className='logo'>
             <img src={ logo } alt='Smiley face'/>
             <h1>Heroku <strong>DJ</strong></h1>
           </a>
-          <div id="audio-player">
-            <ReactPlayer
-              url={ this.props.music.currentTrack }
-              playing={ isPlaying }
-              controls={ false }
-              height={ 0 }
-              width={ 0 }
-              onEnded={ () => this.props.nextTrack() }
-            />
-          </div>
           <p className='byline'>a demo app running on <a href='https://www.heroku.com/' className='logo-salesforce-heroku'>Salesforce Heroku</a></p>
         </header>
 
@@ -163,4 +125,4 @@ class Demand extends Component {
   }
 }
 
-export default connect(select, { fetchPlaylist, nextTrack, togglePlay, fetchAccount, fetchConfig })(Demand);
+export default connect(select, { fetchPlaylist, fetchAccount, fetchConfig })(Demand);
