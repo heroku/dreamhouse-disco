@@ -129,16 +129,109 @@
       position: relative;
       background-image: linear-gradient(#f7f7f7, #fff);
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.2);
-      padding-bottom: 15px;
+      padding-bottom: 1em;
+    }
+
+    .tracks {
+      height: auto;
     }
 
     .track {
       font-size: 20px;
-      &.currently-playing {
-        background: #f7f7f7;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        font-weight: bold;
+      padding: 0;
+      border-bottom: none;
+      position: relative;
+      cursor: pointer;
+
+      &.track-simple {
+        font-size: unset;
+        @include display(flex);
+        @include align-items(center);
+
+        @keyframes animate-in {
+            0% { opacity: 0; }
+          100% { opacity: 1; }
+        }
+
+        &:nth-child(odd) {
+          animation: animate-odd 0.3s both 3s;
+          @keyframes animate-odd {
+              0% { background: #fff; }
+            100% { background: #fcfcfc; }
+          }
+        }
+
+        @for $i from 1 through 10 {
+          &:nth-child(#{$i}) {
+            .track-artwork-big {
+              animation-delay: #{$i * 0.5}s;
+            }
+            .track-artwork-big img {
+              transform: rotate(random(10) - 5 + deg);
+            }
+          }
+        }
+
+        .track-details,
+        .track-artwork {
+          animation: animate-in 1s both 3s;
+        }
+
+        .track-details {
+          padding: 20px;
+        }
+        
+        .track-title,
+        .track-artist {
+          width: auto;
+          padding: 0;
+        }
+        .track-title {
+          font-size: 4em;
+          font-weight: 300;
+          line-height: 1.1em;
+          @include flex(1 1 auto);
+        }
+        .track-artist {
+          width: 100%;
+          font-size: 1.3em;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+        }
+        .track-artwork {
+          padding: 0;
+          width: 17.5em;
+          height: auto;
+          border-radius: 1px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          margin-right: 10px;
+        }
+        .track-artwork-big {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 100;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          pointer-events: none;
+          background: rgba(220, 220, 220, 0.5);
+          animation: animate-artwork-big 3s both;
+          @keyframes animate-artwork-big {
+              0% { opacity: 0; }
+             25% { opacity: 1; }
+             75% { opacity: 1; }
+            100% { opacity: 0; }
+          }
+          img {
+            width: 80vw;
+            height: auto;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+          }
+        }
       }
     }
     
@@ -166,10 +259,18 @@
       text-align: center;
       @include flex(1 1 auto);
       .sms-number {
+        line-height: 1em;
         margin-bottom: 5px;
         padding-bottom: 5px;
         border-bottom: none;
-        font-size: 5vw;
+        font-size: 4em;
+        .sms-number-title {
+          font-size: 0.7em;
+          padding-right: 10px;
+        }
+        strong {
+          font-weight: 600;
+        }
         > * {
           display: inline-block;
           vertical-align: middle;

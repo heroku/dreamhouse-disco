@@ -2,15 +2,13 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Track from './Track';
+import Track from './TrackSimple';
 
 import logo from '../../images/disco-chat-logo.png'
 
 import { fetchPlaylist } from '../actions/musicActions'
 import { fetchAccount } from '../actions/accountActions'
 import { fetchConfig } from '../actions/configActions'
-
-import FlipMove from 'react-flip-move'
 
 const select = function(store, ownProps) {
   const { account, music, config } = store
@@ -27,13 +25,14 @@ class Demand extends Component {
     super(props)
     this.displayNumber = false
     this.fetchingComplete = false
+    this.removeTrack = this.removeTrack.bind(this)
 
     // get config
     props.fetchConfig()
   }
 
   componentDidMount() {
-    this.timeout = setInterval(() => this.handleDisplayNumber(), 30000)
+    this.timeout = setInterval(() => this.handleDisplayNumber(), 3000)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -65,9 +64,14 @@ class Demand extends Component {
   
   handleDisplayNumber() {
     if(this.props.config.fetched && this.props.music.music.tracks.items.length <= 0) {
-      this.displayNumber = true
+      this.displayNumber = false
     }
   }
+
+  removeTrack(track) {
+    alert(`Remove ${track.name}`)
+    console.log(track)
+  } 
 
   render() {
     let phone_number
@@ -75,19 +79,13 @@ class Demand extends Component {
       ({ phone_number } = this.props.account.account)
     }
 
-    let trackItems, currentTrackIndex, tracks
+    let trackItems, tracks
     if (this.props.music.fetched) {
       trackItems = this.props.music.music.tracks.items
-      currentTrackIndex = this.props.music.currentTrackIndex
 
-      tracks = <FlipMove duration={500} easing="ease-out" appearAnimation="fade" enterAnimation="fade" staggerDelayBy="250">
-        {_.map(trackItems, (track) => {
-          return <Track
-            key={ track.track.id + track.added_at }
-            track={ track.track }
-            />
-        })}
-      </FlipMove>
+      tracks = _.map(trackItems, (track) => {
+        return <Track removeTrack={this.removeTrack} key={track.track.id + track.added_at} track={track.track} />
+      }).reverse()
     }
 
     return (
@@ -106,10 +104,10 @@ class Demand extends Component {
               { tracks }
             </ol>
             <footer>
-              <div className='track-count'><span>{ (tracks && tracks.length) || 0 }</span> tracks</div>
+              <div className='track-count'><span>{ (trackItems && trackItems.length) || 0 }</span> tracks</div>
               <div className='request-track'>
                 <div className='sms-number'>
-                  <span>Text a track to </span>
+                  <span className='sms-number-title'>Text a track to </span>
                   <strong>{ phone_number || '(---) --- ---' }</strong>
                 </div>
               </div>
