@@ -931,49 +931,49 @@ header {
     background: #fff; }
   100% {
     background: #fcfcfc; } }
-    .demand.playlist .track.track-simple:nth-child(1) .track-artwork-big {
-      animation-delay: 0.5s; }
-    .demand.playlist .track.track-simple:nth-child(1) .track-artwork-big img {
-      transform: rotate(-3deg); }
-    .demand.playlist .track.track-simple:nth-child(2) .track-artwork-big {
-      animation-delay: 1s; }
-    .demand.playlist .track.track-simple:nth-child(2) .track-artwork-big img {
-      transform: rotate(-3deg); }
-    .demand.playlist .track.track-simple:nth-child(3) .track-artwork-big {
+    .demand.playlist .track.track-simple:nth-child(10) .track-artwork-big {
       animation-delay: 1.5s; }
-    .demand.playlist .track.track-simple:nth-child(3) .track-artwork-big img {
-      transform: rotate(-2deg); }
-    .demand.playlist .track.track-simple:nth-child(4) .track-artwork-big {
-      animation-delay: 2s; }
-    .demand.playlist .track.track-simple:nth-child(4) .track-artwork-big img {
-      transform: rotate(3deg); }
-    .demand.playlist .track.track-simple:nth-child(5) .track-artwork-big {
-      animation-delay: 2.5s; }
-    .demand.playlist .track.track-simple:nth-child(5) .track-artwork-big img {
-      transform: rotate(0deg); }
-    .demand.playlist .track.track-simple:nth-child(6) .track-artwork-big {
+    .demand.playlist .track.track-simple:nth-child(10) .track-artwork-big img {
+      transform: rotate(2deg); }
+    .demand.playlist .track.track-simple:nth-child(9) .track-artwork-big {
       animation-delay: 3s; }
-    .demand.playlist .track.track-simple:nth-child(6) .track-artwork-big img {
-      transform: rotate(0deg); }
-    .demand.playlist .track.track-simple:nth-child(7) .track-artwork-big {
-      animation-delay: 3.5s; }
-    .demand.playlist .track.track-simple:nth-child(7) .track-artwork-big img {
-      transform: rotate(4deg); }
+    .demand.playlist .track.track-simple:nth-child(9) .track-artwork-big img {
+      transform: rotate(2deg); }
     .demand.playlist .track.track-simple:nth-child(8) .track-artwork-big {
-      animation-delay: 4s; }
+      animation-delay: 4.5s; }
     .demand.playlist .track.track-simple:nth-child(8) .track-artwork-big img {
       transform: rotate(-2deg); }
-    .demand.playlist .track.track-simple:nth-child(9) .track-artwork-big {
-      animation-delay: 4.5s; }
-    .demand.playlist .track.track-simple:nth-child(9) .track-artwork-big img {
+    .demand.playlist .track.track-simple:nth-child(7) .track-artwork-big {
+      animation-delay: 6s; }
+    .demand.playlist .track.track-simple:nth-child(7) .track-artwork-big img {
+      transform: rotate(1deg); }
+    .demand.playlist .track.track-simple:nth-child(6) .track-artwork-big {
+      animation-delay: 7.5s; }
+    .demand.playlist .track.track-simple:nth-child(6) .track-artwork-big img {
+      transform: rotate(-3deg); }
+    .demand.playlist .track.track-simple:nth-child(5) .track-artwork-big {
+      animation-delay: 9s; }
+    .demand.playlist .track.track-simple:nth-child(5) .track-artwork-big img {
+      transform: rotate(3deg); }
+    .demand.playlist .track.track-simple:nth-child(4) .track-artwork-big {
+      animation-delay: 10.5s; }
+    .demand.playlist .track.track-simple:nth-child(4) .track-artwork-big img {
       transform: rotate(0deg); }
-    .demand.playlist .track.track-simple:nth-child(10) .track-artwork-big {
-      animation-delay: 5s; }
-    .demand.playlist .track.track-simple:nth-child(10) .track-artwork-big img {
-      transform: rotate(4deg); }
+    .demand.playlist .track.track-simple:nth-child(3) .track-artwork-big {
+      animation-delay: 12s; }
+    .demand.playlist .track.track-simple:nth-child(3) .track-artwork-big img {
+      transform: rotate(2deg); }
+    .demand.playlist .track.track-simple:nth-child(2) .track-artwork-big {
+      animation-delay: 13.5s; }
+    .demand.playlist .track.track-simple:nth-child(2) .track-artwork-big img {
+      transform: rotate(0deg); }
+    .demand.playlist .track.track-simple:nth-child(1) .track-artwork-big {
+      animation-delay: 15s; }
+    .demand.playlist .track.track-simple:nth-child(1) .track-artwork-big img {
+      transform: rotate(-2deg); }
     .demand.playlist .track.track-simple .track-details,
     .demand.playlist .track.track-simple .track-artwork {
-      animation: animate-in 1s both 3s; }
+      animation: animate-in 1.5s both 3s; }
     .demand.playlist .track.track-simple .track-details {
       padding: 20px; }
     .demand.playlist .track.track-simple .track-title,
@@ -1016,7 +1016,7 @@ header {
       justify-content: center;
       pointer-events: none;
       background: rgba(220, 220, 220, 0.5);
-      animation: animate-artwork-big 3s both; }
+      animation: animate-artwork-big 5s both; }
 
 @keyframes animate-artwork-big {
   0% {

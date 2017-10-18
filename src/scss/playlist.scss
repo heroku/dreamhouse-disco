@@ -161,10 +161,10 @@
           }
         }
 
-        @for $i from 1 through 10 {
+        @for $i from 10 through 1 {
           &:nth-child(#{$i}) {
             .track-artwork-big {
-              animation-delay: #{$i * 0.5}s;
+              animation-delay: #{(11 - $i) * 1.5}s;
             }
             .track-artwork-big img {
               transform: rotate(random(10) - 5 + deg);
@@ -174,7 +174,7 @@
 
         .track-details,
         .track-artwork {
-          animation: animate-in 1s both 3s;
+          animation: animate-in 1.5s both 3s;
         }
 
         .track-details {
@@ -219,7 +219,7 @@
           justify-content: center;
           pointer-events: none;
           background: rgba(220, 220, 220, 0.5);
-          animation: animate-artwork-big 3s both;
+          animation: animate-artwork-big 5s both;
           @keyframes animate-artwork-big {
               0% { opacity: 0; }
              25% { opacity: 1; }
