@@ -136,10 +136,11 @@
 
     .tracks {
       height: auto;
-      display:flex;
-      flex-direction:column-reverse;
+      display: flex;
+      flex-direction: column;
       
-      @for $i from 1 through 100 {
+      @for $i from 1 through 200 {
+        .track:nth-child(#{$i}) { order: 100 - $i; }
         &.tracks-count-#{$i} {
           .track {
             @for $j from 1 through $i {
