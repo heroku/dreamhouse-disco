@@ -134,6 +134,20 @@
 
     .tracks {
       height: auto;
+      @for $i from 1 through 100 {
+        &.tracks-count-#{$i} {
+          .track {
+            @for $j from 1 through $i {
+              &:nth-child(#{$j}) {
+                animation-delay: #{($i - $j) * 4}s;
+                .track-artwork-big img {
+                  transform: rotate(random(10) - 5 + deg);
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
     .track {
@@ -153,28 +167,29 @@
           100% { opacity: 1; }
         }
 
-        &:nth-child(odd) {
-          animation: animate-odd 0.3s both 3s;
-          @keyframes animate-odd {
-              0% { background: #fff; }
-            100% { background: #fcfcfc; }
-          }
+        @keyframes animate-artwork-big {
+            0% { opacity: 0; }
+           10% { opacity: 1; }
+           90% { opacity: 1; }
+          100% { opacity: 0; }
         }
 
-        @for $i from 10 through 1 {
-          &:nth-child(#{$i}) {
-            .track-artwork-big {
-              animation-delay: #{(11 - $i) * 1.5}s;
-            }
-            .track-artwork-big img {
-              transform: rotate(random(10) - 5 + deg);
-            }
-          }
+        @keyframes animate-odd {
+            0% { background: #fff; }
+          100% { background: #fcfcfc; }
         }
 
         .track-details,
         .track-artwork {
-          animation: animate-in 1.5s both 3s;
+          animation: animate-in 1.5s both;
+        }
+
+        &:nth-child(odd) {
+          animation: animate-odd 0.3s both;
+        }
+
+        .track-artwork-big {
+          animation: animate-artwork-big 5s both;
         }
 
         .track-details {
@@ -208,6 +223,7 @@
           margin-right: 10px;
         }
         .track-artwork-big {
+          animation-delay: inherit;
           position: fixed;
           top: 0;
           left: 0;
@@ -219,15 +235,8 @@
           justify-content: center;
           pointer-events: none;
           background: rgba(220, 220, 220, 0.5);
-          animation: animate-artwork-big 5s both;
-          @keyframes animate-artwork-big {
-              0% { opacity: 0; }
-             25% { opacity: 1; }
-             75% { opacity: 1; }
-            100% { opacity: 0; }
-          }
           img {
-            width: 80vw;
+            width: 70vw;
             height: auto;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
           }

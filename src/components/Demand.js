@@ -84,7 +84,11 @@ class Demand extends Component {
       trackItems = this.props.music.music.tracks.items
 
       tracks = _.map(trackItems, (track) => {
-        return <Track removeTrack={this.removeTrack} key={track.track.id + track.added_at} track={track.track} />
+        return <Track
+          removeTrack={this.removeTrack}
+          key={track.track.id + track.added_at}
+          track={track.track}
+        />
       }).reverse()
     }
 
@@ -100,7 +104,7 @@ class Demand extends Component {
 
         <div className='playlist-container'>
           <div className='playlist demand'>
-            <ol className='tracks'>
+            <ol className={`tracks tracks-count-${(trackItems && trackItems.length) || 0}`}>
               { tracks }
             </ol>
             <footer>
