@@ -134,12 +134,15 @@
 
     .tracks {
       height: auto;
+      display:flex;
+      flex-direction:column-reverse;
+      
       @for $i from 1 through 100 {
         &.tracks-count-#{$i} {
           .track {
             @for $j from 1 through $i {
               &:nth-child(#{$j}) {
-                animation-delay: #{($i - $j) * 4}s;
+                animation-delay: #{($i - $j) * 4.5}s;
                 .track-artwork-big img {
                   transform: rotate(random(10) - 5 + deg);
                 }

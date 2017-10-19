@@ -89,7 +89,7 @@ class Demand extends Component {
           key={track.track.id + track.added_at}
           track={track.track}
         />
-      }).reverse()
+      })
     }
 
     return (
