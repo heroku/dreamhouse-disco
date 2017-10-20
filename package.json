@@ -33,6 +33,7 @@
     "sass-dev": "node-sass --watch --include-path 'node_modules/bourbon-neat/app/assets/stylesheets'  src/scss/style.scss --output src"
   },
   "engines": {
-    "node": "7.2.1"
+    "node": "8.7.0",
+    "npm": "5.4.2"
   }
 }
