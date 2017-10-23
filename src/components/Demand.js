@@ -6,7 +6,7 @@ import Track from './TrackSimple';
 
 import logo from '../../images/disco-chat-logo.png'
 
-import { fetchPlaylist } from '../actions/musicActions'
+import { fetchPlaylist, nextNewTrack } from '../actions/musicActions'
 import { fetchAccount } from '../actions/accountActions'
 import { fetchConfig } from '../actions/configActions'
 
@@ -127,4 +127,4 @@ class Demand extends Component {
   }
 }
 
-export default connect(select, { fetchPlaylist, fetchAccount, fetchConfig })(Demand);
+export default connect(select, { fetchPlaylist, nextNewTrack, fetchAccount, fetchConfig })(Demand);

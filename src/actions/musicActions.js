@@ -24,3 +24,9 @@ export function togglePlay() {
     type: 'TOGGLE_PLAY'
   }
 }
+
+export function nextNewTrack() {
+  return {
+    type: 'NEXT_NEW_TRACK'
+  }
+}

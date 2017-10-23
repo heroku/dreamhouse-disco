@@ -4,6 +4,8 @@ export default function reducer(state={
   music: {},
   currentTrack: null,
   currentTrackIndex: 0,
+  newTrack: null,
+  newTracks: [],
   playing: true,
   fetching: false,
   fetched: false,
@@ -26,6 +28,15 @@ export default function reducer(state={
         music: action.payload
       }
 
+      // Determine tracks in newState that are not in state
+      // i.e. determine new tracks added to playlist
+      // FIXME: this does not handle the same track being added twice to the playlist
+      //        maybe use composite key of track.id and music.snapshot_id ?
+      const currentTracks = _.get(state, `music.tracks.items`, [])
+      let tracksDiff = _.differenceBy(newState.music.tracks.items, currentTracks, "track.id")
+      newState.newTracks = state.newTracks.concat(tracksDiff)
+
+      // Determine what the currently playing track is -- i.e. the first track in the array
       let currentTrack = _.get(action, `payload.tracks.items[${state.currentTrackIndex}].track.preview_url`)
       if (currentTrack) {
         newState.currentTrack = currentTrack.slice(0)
@@ -47,6 +58,17 @@ export default function reducer(state={
 
     case 'TOGGLE_PLAY': {
       return {...state, playing: !state.playing }
+    }
+
+    case 'NEXT_NEW_TRACK': {
+      const newTrack = _.first(state.newTracks)
+      const newTracks = state.newTracks.slice(1)
+
+      return {
+        ...state,
+        newTrack,
+        newTracks
+      }
     }
 
     default: {
