@@ -96,7 +96,7 @@ class Demand extends Component {
   
   handleDisplayNumber() {
     if(this.props.config.fetched && this.props.music.music.tracks.items.length <= 0) {
-      this.displayNumber = false
+      this.displayNumber = true
     }
   }
 
