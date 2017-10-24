@@ -145,7 +145,7 @@ class Demand extends Component {
               <div className='track-count'><span>{ (trackItems && trackItems.length) || 0 }</span> tracks</div>
               <div className='request-track'>
                 <div className='sms-number'>
-                  <span className='sms-number-title'>Text a track to </span>
+                  <span className='sms-number-title'>Text DJ request to </span>
                   <strong>{ phone_number || '(---) --- ---' }</strong>
                 </div>
               </div>
@@ -153,7 +153,7 @@ class Demand extends Component {
           </div>
         </div>
       <div className={`demand big-number ${this.displayNumber ? 'display-big-number' : ''}`}>
-          <span>Text a track to </span>
+          <span>Text DJ request to </span>
           <strong>{ phone_number || '(---) --- ---' }</strong>
         </div>
       </div>
