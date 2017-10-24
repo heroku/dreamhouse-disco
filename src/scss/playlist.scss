@@ -140,17 +140,10 @@
       flex-direction: column;
       
       @for $i from 1 through 200 {
-        .track:nth-child(#{$i}) { order: 100 - $i; }
-        &.tracks-count-#{$i} {
-          .track {
-            @for $j from 1 through $i {
-              &:nth-child(#{$j}) {
-                animation-delay: #{($i - $j) * 4.5}s;
-                .track-artwork-big img {
-                  transform: rotate(random(10) - 5 + deg);
-                }
-              }
-            }
+        .track:nth-child(#{$i}) {
+          order: 100 - $i;
+          .track-artwork-big img {
+            transform: rotate(random(10) - 5 + deg);
           }
         }
       }
@@ -165,19 +158,16 @@
       flex: 0 0 auto;
 
       &.track-simple {
+        display: none;
         font-size: unset;
-        @include display(flex);
-        @include align-items(center);
 
-        @keyframes animate-in {
+        @keyframes fade-in {
             0% { opacity: 0; }
           100% { opacity: 1; }
         }
 
-        @keyframes animate-artwork-big {
-            0% { opacity: 0; }
-           10% { opacity: 1; }
-           90% { opacity: 1; }
+        @keyframes fade-out {
+            0% { opacity: 1; }
           100% { opacity: 0; }
         }
 
@@ -186,17 +176,44 @@
           100% { background: #fcfcfc; }
         }
 
-        .track-details,
-        .track-artwork {
-          animation: animate-in 1.5s both;
+        @keyframes animate-artwork-big {
+            0% { opacity: 0; }
+            5% { opacity: 1; }
+           95% { opacity: 1; }
+          100% { opacity: 0; }
+        }
+
+        &.track-display {
+          @include display(flex);
+        }
+
+        &.track-animate,
+        &.track-animate-out {
+          .track-artwork-big {
+            @include display(flex);
+          }
+        }
+
+        &.track-animate {
+          .track-artwork-big {
+            animation: animate-artwork-big 4s both;
+          }
+        }
+
+        &.track-animate-out {
+          .track-artwork-big {
+            animation: fade-out 0.5s both;
+          }
+        }
+
+        .track-content {
+          animation: fade-in 1.5s both;
+          @include display(flex);
+          @include align-items(center);
         }
 
         &:nth-child(odd) {
           animation: animate-odd 0.3s both;
-        }
-
-        .track-artwork-big {
-          animation: animate-artwork-big 5s both;
         }
 
         .track-details {
@@ -230,18 +247,16 @@
           margin-right: 10px;
         }
         .track-artwork-big {
-          animation-delay: inherit;
           position: fixed;
           top: 0;
           left: 0;
           width: 100%;
           height: 100%;
           z-index: 100;
-          display: flex;
+          display: none;
           align-items: center;
           justify-content: center;
-          pointer-events: none;
-          background: rgba(220, 220, 220, 0.5);
+          background: rgba(0, 0, 0, 0.25);
           img {
             width: 70vw;
             height: auto;

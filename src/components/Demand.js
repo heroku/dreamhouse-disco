@@ -23,9 +23,12 @@ const select = function(store, ownProps) {
 class Demand extends Component {
   constructor(props) {
     super(props)
+    this.state = {currentTrackID: null}
+
     this.displayNumber = false
     this.fetchingComplete = false
     this.removeTrack = this.removeTrack.bind(this)
+    this.dismissAnimation = this.dismissAnimation.bind(this)
 
     // get config
     props.fetchConfig()
@@ -47,11 +50,16 @@ class Demand extends Component {
       // Fetch playlist
       const playlistUrl = `${nextProps.config.config.apiUrl}/api/spotify_playlist`
       this.props.fetchPlaylist(playlistUrl)
+      
       this.playlistFetchTimer = setInterval(() => {
         this.props.fetchPlaylist(playlistUrl)
         if(this.props.music.music.tracks.items.length > 0) {
           this.displayNumber = false
-        }
+        }        
+      }, 5000)
+
+      this.checkForNewTrackTimer = setInterval(() => {
+        this.checkForNewTrack()
       }, 5000)
     }
   }
@@ -60,6 +68,30 @@ class Demand extends Component {
     // Stop timer that triggers continuous playlist re-fetch
     clearInterval(this.playlistFetchTimer)
     clearInterval(this.timeout)
+  }
+
+  checkForNewTrack() {
+    this.props.nextNewTrack()
+
+    setTimeout(() => {
+      if(this.props.music.newTrack) {
+        let track = this.props.music.newTrack
+        console.log("next track is: " + track.track.name)
+        this.setState({currentTrackID: track.track.id + track.added_at})
+      } else {
+        this.setState({currentTrackID: null})
+      }
+    }, 10)
+  }
+
+  dismissAnimation() {
+    // Reset timer
+    clearInterval(this.checkForNewTrackTimer)
+    this.checkForNewTrackTimer = setInterval(() => {
+      this.checkForNewTrack()
+    }, 5000)
+
+    this.checkForNewTrack()
   }
   
   handleDisplayNumber() {
@@ -88,6 +120,8 @@ class Demand extends Component {
           removeTrack={this.removeTrack}
           key={track.track.id + track.added_at}
           track={track.track}
+          currentTrack={track.track.id + track.added_at === this.state.currentTrackID}
+          dismissAnimation={this.dismissAnimation}
         />
       })
     }
