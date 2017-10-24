@@ -9,6 +9,7 @@ import { UserAuthWrapper } from 'redux-auth-wrapper'
 
 import App from './components/App';
 import Music from './components/Music';
+import Demand from './components/Demand';
 import Logout from './components/Logout';
 import store from './store'
 
@@ -36,6 +37,7 @@ ReactDOM.render(
     <Router history={history}>
       <Route path='/' component={App}/>
       <Route path="/music" component={UserIsAuthenticated(Music)}/>
+      <Route path="/demand" component={UserIsAuthenticated(Demand)}/>
       <Route path="/logout" component={Logout}/>
       <Route path="*" component={NoMatch}/>
     </Router>
