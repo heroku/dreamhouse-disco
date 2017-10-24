@@ -127,8 +127,10 @@
   &.playlist {
     footer {
       position: relative;
-      background-image: linear-gradient(#f7f7f7, #fff);
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.2);
+      color: white;
+      background-image: linear-gradient($color-slate, darken($color-slate, 3%));
+      text-shadow: 0 1px 5px 20px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.2);
       z-index: 2;
       flex: 0 0 auto;
       padding-bottom: 1em;
@@ -178,8 +180,8 @@
 
         @keyframes animate-artwork-big {
             0% { opacity: 0; }
-            5% { opacity: 1; }
-           95% { opacity: 1; }
+           10% { opacity: 1; }
+           90% { opacity: 1; }
           100% { opacity: 0; }
         }
 
@@ -256,7 +258,7 @@
           display: none;
           align-items: center;
           justify-content: center;
-          background: rgba(0, 0, 0, 0.25);
+          // background: rgba(0, 0, 0, 0.25);
           img {
             width: 70vw;
             height: auto;
@@ -269,20 +271,20 @@
     .track-count {
       font-style: italic;
       position: absolute;
-      top: -36px;
+      top: -32px;
       right: 0;
-      border-radius: 3px 0 0 0;
-      padding: 5px 10px 5px 5px;
-      background: #ccc;
+      border-radius: 5px 0 0 0;
+      padding: 6px 10px 0 6px;
+      background: $color-slate;
       span {
         margin-right: 3px;
         padding: 3px 8px;
         display: inline-block;
-        background: #048ec6;
+        background: white;
         border-radius: 3px;
         font-style: normal;
         font-weight: 400;
-        color: white;
+        color: $color-slate;
       }
     }
     

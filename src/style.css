@@ -462,8 +462,11 @@ header {
   -ms-flex-align: center;
   padding: 10px 20px;
   z-index: 10;
-  background: #17344e;
-  color: white; }
+  color: white;
+  background-image: linear-gradient(#142c42, #17344e);
+  text-shadow: 0 1px 5px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.2);
+  z-index: 2; }
   header .logo {
     display: -webkit-flex;
     display: -moz-flex;
@@ -889,8 +892,10 @@ header {
 
 .demand.playlist footer {
   position: relative;
-  background-image: linear-gradient(#f7f7f7, #fff);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.2);
+  color: white;
+  background-image: linear-gradient(#17344e, #142c42);
+  text-shadow: 0 1px 5px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.1), 0 0 2px rgba(0, 0, 0, 0.2);
   z-index: 2;
   flex: 0 0 auto;
   padding-bottom: 1em; }
@@ -902,11 +907,11 @@ header {
   .demand.playlist .tracks .track:nth-child(1) {
     order: 99; }
     .demand.playlist .tracks .track:nth-child(1) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(2) {
     order: 98; }
     .demand.playlist .tracks .track:nth-child(2) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(3) {
     order: 97; }
     .demand.playlist .tracks .track:nth-child(3) .track-artwork-big img {
@@ -922,31 +927,31 @@ header {
   .demand.playlist .tracks .track:nth-child(6) {
     order: 94; }
     .demand.playlist .tracks .track:nth-child(6) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(7) {
     order: 93; }
     .demand.playlist .tracks .track:nth-child(7) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(2deg); }
   .demand.playlist .tracks .track:nth-child(8) {
     order: 92; }
     .demand.playlist .tracks .track:nth-child(8) .track-artwork-big img {
-      transform: rotate(1deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(9) {
     order: 91; }
     .demand.playlist .tracks .track:nth-child(9) .track-artwork-big img {
-      transform: rotate(4deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(10) {
     order: 90; }
     .demand.playlist .tracks .track:nth-child(10) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(11) {
     order: 89; }
     .demand.playlist .tracks .track:nth-child(11) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(2deg); }
   .demand.playlist .tracks .track:nth-child(12) {
     order: 88; }
     .demand.playlist .tracks .track:nth-child(12) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(13) {
     order: 87; }
     .demand.playlist .tracks .track:nth-child(13) .track-artwork-big img {
@@ -954,123 +959,123 @@ header {
   .demand.playlist .tracks .track:nth-child(14) {
     order: 86; }
     .demand.playlist .tracks .track:nth-child(14) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(15) {
     order: 85; }
     .demand.playlist .tracks .track:nth-child(15) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(16) {
     order: 84; }
     .demand.playlist .tracks .track:nth-child(16) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(2deg); }
   .demand.playlist .tracks .track:nth-child(17) {
     order: 83; }
     .demand.playlist .tracks .track:nth-child(17) .track-artwork-big img {
-      transform: rotate(1deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(18) {
     order: 82; }
     .demand.playlist .tracks .track:nth-child(18) .track-artwork-big img {
-      transform: rotate(-4deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(19) {
     order: 81; }
     .demand.playlist .tracks .track:nth-child(19) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(20) {
     order: 80; }
     .demand.playlist .tracks .track:nth-child(20) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(21) {
     order: 79; }
     .demand.playlist .tracks .track:nth-child(21) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(22) {
     order: 78; }
     .demand.playlist .tracks .track:nth-child(22) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(23) {
     order: 77; }
     .demand.playlist .tracks .track:nth-child(23) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(5deg); }
   .demand.playlist .tracks .track:nth-child(24) {
     order: 76; }
     .demand.playlist .tracks .track:nth-child(24) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(2deg); }
   .demand.playlist .tracks .track:nth-child(25) {
     order: 75; }
     .demand.playlist .tracks .track:nth-child(25) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(26) {
     order: 74; }
     .demand.playlist .tracks .track:nth-child(26) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(27) {
     order: 73; }
     .demand.playlist .tracks .track:nth-child(27) .track-artwork-big img {
-      transform: rotate(1deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(28) {
     order: 72; }
     .demand.playlist .tracks .track:nth-child(28) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(29) {
     order: 71; }
     .demand.playlist .tracks .track:nth-child(29) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(30) {
     order: 70; }
     .demand.playlist .tracks .track:nth-child(30) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(31) {
     order: 69; }
     .demand.playlist .tracks .track:nth-child(31) .track-artwork-big img {
-      transform: rotate(1deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(32) {
     order: 68; }
     .demand.playlist .tracks .track:nth-child(32) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(33) {
     order: 67; }
     .demand.playlist .tracks .track:nth-child(33) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(34) {
     order: 66; }
     .demand.playlist .tracks .track:nth-child(34) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(2deg); }
   .demand.playlist .tracks .track:nth-child(35) {
     order: 65; }
     .demand.playlist .tracks .track:nth-child(35) .track-artwork-big img {
-      transform: rotate(4deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(36) {
     order: 64; }
     .demand.playlist .tracks .track:nth-child(36) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(37) {
     order: 63; }
     .demand.playlist .tracks .track:nth-child(37) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(38) {
     order: 62; }
     .demand.playlist .tracks .track:nth-child(38) .track-artwork-big img {
-      transform: rotate(1deg); }
+      transform: rotate(5deg); }
   .demand.playlist .tracks .track:nth-child(39) {
     order: 61; }
     .demand.playlist .tracks .track:nth-child(39) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(40) {
     order: 60; }
     .demand.playlist .tracks .track:nth-child(40) .track-artwork-big img {
-      transform: rotate(4deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(41) {
     order: 59; }
     .demand.playlist .tracks .track:nth-child(41) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(5deg); }
   .demand.playlist .tracks .track:nth-child(42) {
     order: 58; }
     .demand.playlist .tracks .track:nth-child(42) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(43) {
     order: 57; }
     .demand.playlist .tracks .track:nth-child(43) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(44) {
     order: 56; }
     .demand.playlist .tracks .track:nth-child(44) .track-artwork-big img {
@@ -1078,107 +1083,107 @@ header {
   .demand.playlist .tracks .track:nth-child(45) {
     order: 55; }
     .demand.playlist .tracks .track:nth-child(45) .track-artwork-big img {
-      transform: rotate(1deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(46) {
     order: 54; }
     .demand.playlist .tracks .track:nth-child(46) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(47) {
     order: 53; }
     .demand.playlist .tracks .track:nth-child(47) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(48) {
     order: 52; }
     .demand.playlist .tracks .track:nth-child(48) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(49) {
     order: 51; }
     .demand.playlist .tracks .track:nth-child(49) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(50) {
     order: 50; }
     .demand.playlist .tracks .track:nth-child(50) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(51) {
     order: 49; }
     .demand.playlist .tracks .track:nth-child(51) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(52) {
     order: 48; }
     .demand.playlist .tracks .track:nth-child(52) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(53) {
     order: 47; }
     .demand.playlist .tracks .track:nth-child(53) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(54) {
     order: 46; }
     .demand.playlist .tracks .track:nth-child(54) .track-artwork-big img {
-      transform: rotate(-4deg); }
+      transform: rotate(2deg); }
   .demand.playlist .tracks .track:nth-child(55) {
     order: 45; }
     .demand.playlist .tracks .track:nth-child(55) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(56) {
     order: 44; }
     .demand.playlist .tracks .track:nth-child(56) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(5deg); }
   .demand.playlist .tracks .track:nth-child(57) {
     order: 43; }
     .demand.playlist .tracks .track:nth-child(57) .track-artwork-big img {
-      transform: rotate(4deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(58) {
     order: 42; }
     .demand.playlist .tracks .track:nth-child(58) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(59) {
     order: 41; }
     .demand.playlist .tracks .track:nth-child(59) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(60) {
     order: 40; }
     .demand.playlist .tracks .track:nth-child(60) .track-artwork-big img {
-      transform: rotate(1deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(61) {
     order: 39; }
     .demand.playlist .tracks .track:nth-child(61) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(62) {
     order: 38; }
     .demand.playlist .tracks .track:nth-child(62) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(63) {
     order: 37; }
     .demand.playlist .tracks .track:nth-child(63) .track-artwork-big img {
-      transform: rotate(-4deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(64) {
     order: 36; }
     .demand.playlist .tracks .track:nth-child(64) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(65) {
     order: 35; }
     .demand.playlist .tracks .track:nth-child(65) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(2deg); }
   .demand.playlist .tracks .track:nth-child(66) {
     order: 34; }
     .demand.playlist .tracks .track:nth-child(66) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(67) {
     order: 33; }
     .demand.playlist .tracks .track:nth-child(67) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(68) {
     order: 32; }
     .demand.playlist .tracks .track:nth-child(68) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(69) {
     order: 31; }
     .demand.playlist .tracks .track:nth-child(69) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(70) {
     order: 30; }
     .demand.playlist .tracks .track:nth-child(70) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(71) {
     order: 29; }
     .demand.playlist .tracks .track:nth-child(71) .track-artwork-big img {
@@ -1186,11 +1191,11 @@ header {
   .demand.playlist .tracks .track:nth-child(72) {
     order: 28; }
     .demand.playlist .tracks .track:nth-child(72) .track-artwork-big img {
-      transform: rotate(-4deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(73) {
     order: 27; }
     .demand.playlist .tracks .track:nth-child(73) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(74) {
     order: 26; }
     .demand.playlist .tracks .track:nth-child(74) .track-artwork-big img {
@@ -1198,19 +1203,19 @@ header {
   .demand.playlist .tracks .track:nth-child(75) {
     order: 25; }
     .demand.playlist .tracks .track:nth-child(75) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(76) {
     order: 24; }
     .demand.playlist .tracks .track:nth-child(76) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(77) {
     order: 23; }
     .demand.playlist .tracks .track:nth-child(77) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(78) {
     order: 22; }
     .demand.playlist .tracks .track:nth-child(78) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(79) {
     order: 21; }
     .demand.playlist .tracks .track:nth-child(79) .track-artwork-big img {
@@ -1218,23 +1223,23 @@ header {
   .demand.playlist .tracks .track:nth-child(80) {
     order: 20; }
     .demand.playlist .tracks .track:nth-child(80) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(81) {
     order: 19; }
     .demand.playlist .tracks .track:nth-child(81) .track-artwork-big img {
-      transform: rotate(4deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(82) {
     order: 18; }
     .demand.playlist .tracks .track:nth-child(82) .track-artwork-big img {
-      transform: rotate(4deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(83) {
     order: 17; }
     .demand.playlist .tracks .track:nth-child(83) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(84) {
     order: 16; }
     .demand.playlist .tracks .track:nth-child(84) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(85) {
     order: 15; }
     .demand.playlist .tracks .track:nth-child(85) .track-artwork-big img {
@@ -1242,11 +1247,11 @@ header {
   .demand.playlist .tracks .track:nth-child(86) {
     order: 14; }
     .demand.playlist .tracks .track:nth-child(86) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(87) {
     order: 13; }
     .demand.playlist .tracks .track:nth-child(87) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(88) {
     order: 12; }
     .demand.playlist .tracks .track:nth-child(88) .track-artwork-big img {
@@ -1254,39 +1259,39 @@ header {
   .demand.playlist .tracks .track:nth-child(89) {
     order: 11; }
     .demand.playlist .tracks .track:nth-child(89) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(90) {
     order: 10; }
     .demand.playlist .tracks .track:nth-child(90) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(91) {
     order: 9; }
     .demand.playlist .tracks .track:nth-child(91) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(92) {
     order: 8; }
     .demand.playlist .tracks .track:nth-child(92) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(93) {
     order: 7; }
     .demand.playlist .tracks .track:nth-child(93) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(94) {
     order: 6; }
     .demand.playlist .tracks .track:nth-child(94) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(95) {
     order: 5; }
     .demand.playlist .tracks .track:nth-child(95) .track-artwork-big img {
-      transform: rotate(4deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(96) {
     order: 4; }
     .demand.playlist .tracks .track:nth-child(96) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(97) {
     order: 3; }
     .demand.playlist .tracks .track:nth-child(97) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(98) {
     order: 2; }
     .demand.playlist .tracks .track:nth-child(98) .track-artwork-big img {
@@ -1294,39 +1299,39 @@ header {
   .demand.playlist .tracks .track:nth-child(99) {
     order: 1; }
     .demand.playlist .tracks .track:nth-child(99) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(100) {
     order: 0; }
     .demand.playlist .tracks .track:nth-child(100) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(101) {
     order: -1; }
     .demand.playlist .tracks .track:nth-child(101) .track-artwork-big img {
-      transform: rotate(-4deg); }
+      transform: rotate(5deg); }
   .demand.playlist .tracks .track:nth-child(102) {
     order: -2; }
     .demand.playlist .tracks .track:nth-child(102) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(103) {
     order: -3; }
     .demand.playlist .tracks .track:nth-child(103) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(5deg); }
   .demand.playlist .tracks .track:nth-child(104) {
     order: -4; }
     .demand.playlist .tracks .track:nth-child(104) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(105) {
     order: -5; }
     .demand.playlist .tracks .track:nth-child(105) .track-artwork-big img {
-      transform: rotate(-4deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(106) {
     order: -6; }
     .demand.playlist .tracks .track:nth-child(106) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(107) {
     order: -7; }
     .demand.playlist .tracks .track:nth-child(107) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(108) {
     order: -8; }
     .demand.playlist .tracks .track:nth-child(108) .track-artwork-big img {
@@ -1334,23 +1339,23 @@ header {
   .demand.playlist .tracks .track:nth-child(109) {
     order: -9; }
     .demand.playlist .tracks .track:nth-child(109) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(110) {
     order: -10; }
     .demand.playlist .tracks .track:nth-child(110) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(2deg); }
   .demand.playlist .tracks .track:nth-child(111) {
     order: -11; }
     .demand.playlist .tracks .track:nth-child(111) .track-artwork-big img {
-      transform: rotate(1deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(112) {
     order: -12; }
     .demand.playlist .tracks .track:nth-child(112) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(113) {
     order: -13; }
     .demand.playlist .tracks .track:nth-child(113) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(114) {
     order: -14; }
     .demand.playlist .tracks .track:nth-child(114) .track-artwork-big img {
@@ -1358,47 +1363,47 @@ header {
   .demand.playlist .tracks .track:nth-child(115) {
     order: -15; }
     .demand.playlist .tracks .track:nth-child(115) .track-artwork-big img {
-      transform: rotate(4deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(116) {
     order: -16; }
     .demand.playlist .tracks .track:nth-child(116) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(117) {
     order: -17; }
     .demand.playlist .tracks .track:nth-child(117) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(2deg); }
   .demand.playlist .tracks .track:nth-child(118) {
     order: -18; }
     .demand.playlist .tracks .track:nth-child(118) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(119) {
     order: -19; }
     .demand.playlist .tracks .track:nth-child(119) .track-artwork-big img {
-      transform: rotate(4deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(120) {
     order: -20; }
     .demand.playlist .tracks .track:nth-child(120) .track-artwork-big img {
-      transform: rotate(-4deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(121) {
     order: -21; }
     .demand.playlist .tracks .track:nth-child(121) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(122) {
     order: -22; }
     .demand.playlist .tracks .track:nth-child(122) .track-artwork-big img {
-      transform: rotate(-4deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(123) {
     order: -23; }
     .demand.playlist .tracks .track:nth-child(123) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(124) {
     order: -24; }
     .demand.playlist .tracks .track:nth-child(124) .track-artwork-big img {
-      transform: rotate(1deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(125) {
     order: -25; }
     .demand.playlist .tracks .track:nth-child(125) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(126) {
     order: -26; }
     .demand.playlist .tracks .track:nth-child(126) .track-artwork-big img {
@@ -1406,79 +1411,79 @@ header {
   .demand.playlist .tracks .track:nth-child(127) {
     order: -27; }
     .demand.playlist .tracks .track:nth-child(127) .track-artwork-big img {
-      transform: rotate(-4deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(128) {
     order: -28; }
     .demand.playlist .tracks .track:nth-child(128) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(129) {
     order: -29; }
     .demand.playlist .tracks .track:nth-child(129) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(130) {
     order: -30; }
     .demand.playlist .tracks .track:nth-child(130) .track-artwork-big img {
-      transform: rotate(-4deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(131) {
     order: -31; }
     .demand.playlist .tracks .track:nth-child(131) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(132) {
     order: -32; }
     .demand.playlist .tracks .track:nth-child(132) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(2deg); }
   .demand.playlist .tracks .track:nth-child(133) {
     order: -33; }
     .demand.playlist .tracks .track:nth-child(133) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(134) {
     order: -34; }
     .demand.playlist .tracks .track:nth-child(134) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(135) {
     order: -35; }
     .demand.playlist .tracks .track:nth-child(135) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(136) {
     order: -36; }
     .demand.playlist .tracks .track:nth-child(136) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(2deg); }
   .demand.playlist .tracks .track:nth-child(137) {
     order: -37; }
     .demand.playlist .tracks .track:nth-child(137) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(138) {
     order: -38; }
     .demand.playlist .tracks .track:nth-child(138) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(139) {
     order: -39; }
     .demand.playlist .tracks .track:nth-child(139) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(2deg); }
   .demand.playlist .tracks .track:nth-child(140) {
     order: -40; }
     .demand.playlist .tracks .track:nth-child(140) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(141) {
     order: -41; }
     .demand.playlist .tracks .track:nth-child(141) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(142) {
     order: -42; }
     .demand.playlist .tracks .track:nth-child(142) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(143) {
     order: -43; }
     .demand.playlist .tracks .track:nth-child(143) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(144) {
     order: -44; }
     .demand.playlist .tracks .track:nth-child(144) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(145) {
     order: -45; }
     .demand.playlist .tracks .track:nth-child(145) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(146) {
     order: -46; }
     .demand.playlist .tracks .track:nth-child(146) .track-artwork-big img {
@@ -1486,71 +1491,71 @@ header {
   .demand.playlist .tracks .track:nth-child(147) {
     order: -47; }
     .demand.playlist .tracks .track:nth-child(147) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(148) {
     order: -48; }
     .demand.playlist .tracks .track:nth-child(148) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(149) {
     order: -49; }
     .demand.playlist .tracks .track:nth-child(149) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(150) {
     order: -50; }
     .demand.playlist .tracks .track:nth-child(150) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(5deg); }
   .demand.playlist .tracks .track:nth-child(151) {
     order: -51; }
     .demand.playlist .tracks .track:nth-child(151) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(152) {
     order: -52; }
     .demand.playlist .tracks .track:nth-child(152) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(153) {
     order: -53; }
     .demand.playlist .tracks .track:nth-child(153) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(154) {
     order: -54; }
     .demand.playlist .tracks .track:nth-child(154) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(5deg); }
   .demand.playlist .tracks .track:nth-child(155) {
     order: -55; }
     .demand.playlist .tracks .track:nth-child(155) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(5deg); }
   .demand.playlist .tracks .track:nth-child(156) {
     order: -56; }
     .demand.playlist .tracks .track:nth-child(156) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(157) {
     order: -57; }
     .demand.playlist .tracks .track:nth-child(157) .track-artwork-big img {
-      transform: rotate(4deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(158) {
     order: -58; }
     .demand.playlist .tracks .track:nth-child(158) .track-artwork-big img {
-      transform: rotate(4deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(159) {
     order: -59; }
     .demand.playlist .tracks .track:nth-child(159) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(160) {
     order: -60; }
     .demand.playlist .tracks .track:nth-child(160) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(161) {
     order: -61; }
     .demand.playlist .tracks .track:nth-child(161) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(162) {
     order: -62; }
     .demand.playlist .tracks .track:nth-child(162) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(163) {
     order: -63; }
     .demand.playlist .tracks .track:nth-child(163) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(-1deg); }
   .demand.playlist .tracks .track:nth-child(164) {
     order: -64; }
     .demand.playlist .tracks .track:nth-child(164) .track-artwork-big img {
@@ -1558,23 +1563,23 @@ header {
   .demand.playlist .tracks .track:nth-child(165) {
     order: -65; }
     .demand.playlist .tracks .track:nth-child(165) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(166) {
     order: -66; }
     .demand.playlist .tracks .track:nth-child(166) .track-artwork-big img {
-      transform: rotate(-4deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(167) {
     order: -67; }
     .demand.playlist .tracks .track:nth-child(167) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(168) {
     order: -68; }
     .demand.playlist .tracks .track:nth-child(168) .track-artwork-big img {
-      transform: rotate(5deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(169) {
     order: -69; }
     .demand.playlist .tracks .track:nth-child(169) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(170) {
     order: -70; }
     .demand.playlist .tracks .track:nth-child(170) .track-artwork-big img {
@@ -1582,123 +1587,123 @@ header {
   .demand.playlist .tracks .track:nth-child(171) {
     order: -71; }
     .demand.playlist .tracks .track:nth-child(171) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(172) {
     order: -72; }
     .demand.playlist .tracks .track:nth-child(172) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(173) {
     order: -73; }
     .demand.playlist .tracks .track:nth-child(173) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(5deg); }
   .demand.playlist .tracks .track:nth-child(174) {
     order: -74; }
     .demand.playlist .tracks .track:nth-child(174) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(175) {
     order: -75; }
     .demand.playlist .tracks .track:nth-child(175) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(176) {
     order: -76; }
     .demand.playlist .tracks .track:nth-child(176) .track-artwork-big img {
-      transform: rotate(4deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(177) {
     order: -77; }
     .demand.playlist .tracks .track:nth-child(177) .track-artwork-big img {
-      transform: rotate(4deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(178) {
     order: -78; }
     .demand.playlist .tracks .track:nth-child(178) .track-artwork-big img {
-      transform: rotate(1deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(179) {
     order: -79; }
     .demand.playlist .tracks .track:nth-child(179) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(180) {
     order: -80; }
     .demand.playlist .tracks .track:nth-child(180) .track-artwork-big img {
-      transform: rotate(1deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(181) {
     order: -81; }
     .demand.playlist .tracks .track:nth-child(181) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(2deg); }
   .demand.playlist .tracks .track:nth-child(182) {
     order: -82; }
     .demand.playlist .tracks .track:nth-child(182) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(183) {
     order: -83; }
     .demand.playlist .tracks .track:nth-child(183) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(184) {
     order: -84; }
     .demand.playlist .tracks .track:nth-child(184) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(185) {
     order: -85; }
     .demand.playlist .tracks .track:nth-child(185) .track-artwork-big img {
-      transform: rotate(1deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(186) {
     order: -86; }
     .demand.playlist .tracks .track:nth-child(186) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(187) {
     order: -87; }
     .demand.playlist .tracks .track:nth-child(187) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(188) {
     order: -88; }
     .demand.playlist .tracks .track:nth-child(188) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(189) {
     order: -89; }
     .demand.playlist .tracks .track:nth-child(189) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(-4deg); }
   .demand.playlist .tracks .track:nth-child(190) {
     order: -90; }
     .demand.playlist .tracks .track:nth-child(190) .track-artwork-big img {
-      transform: rotate(-4deg); }
+      transform: rotate(0deg); }
   .demand.playlist .tracks .track:nth-child(191) {
     order: -91; }
     .demand.playlist .tracks .track:nth-child(191) .track-artwork-big img {
-      transform: rotate(-1deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(192) {
     order: -92; }
     .demand.playlist .tracks .track:nth-child(192) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(-3deg); }
   .demand.playlist .tracks .track:nth-child(193) {
     order: -93; }
     .demand.playlist .tracks .track:nth-child(193) .track-artwork-big img {
-      transform: rotate(-3deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(194) {
     order: -94; }
     .demand.playlist .tracks .track:nth-child(194) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(195) {
     order: -95; }
     .demand.playlist .tracks .track:nth-child(195) .track-artwork-big img {
-      transform: rotate(-4deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(196) {
     order: -96; }
     .demand.playlist .tracks .track:nth-child(196) .track-artwork-big img {
-      transform: rotate(2deg); }
+      transform: rotate(3deg); }
   .demand.playlist .tracks .track:nth-child(197) {
     order: -97; }
     .demand.playlist .tracks .track:nth-child(197) .track-artwork-big img {
-      transform: rotate(3deg); }
+      transform: rotate(1deg); }
   .demand.playlist .tracks .track:nth-child(198) {
     order: -98; }
     .demand.playlist .tracks .track:nth-child(198) .track-artwork-big img {
-      transform: rotate(-4deg); }
+      transform: rotate(-2deg); }
   .demand.playlist .tracks .track:nth-child(199) {
     order: -99; }
     .demand.playlist .tracks .track:nth-child(199) .track-artwork-big img {
-      transform: rotate(0deg); }
+      transform: rotate(4deg); }
   .demand.playlist .tracks .track:nth-child(200) {
     order: -100; }
     .demand.playlist .tracks .track:nth-child(200) .track-artwork-big img {
-      transform: rotate(-2deg); }
+      transform: rotate(-1deg); }
 
 .demand.playlist .track {
   font-size: 20px;
@@ -1732,9 +1737,9 @@ header {
 @keyframes animate-artwork-big {
   0% {
     opacity: 0; }
-  5% {
+  10% {
     opacity: 1; }
-  95% {
+  90% {
     opacity: 1; }
   100% {
     opacity: 0; } }
@@ -1808,8 +1813,7 @@ header {
       z-index: 100;
       display: none;
       align-items: center;
-      justify-content: center;
-      background: rgba(0, 0, 0, 0.25); }
+      justify-content: center; }
       .demand.playlist .track.track-simple .track-artwork-big img {
         width: 70vw;
         height: auto;
@@ -1818,20 +1822,20 @@ header {
 .demand.playlist .track-count {
   font-style: italic;
   position: absolute;
-  top: -36px;
+  top: -32px;
   right: 0;
-  border-radius: 3px 0 0 0;
-  padding: 5px 10px 5px 5px;
-  background: #ccc; }
+  border-radius: 5px 0 0 0;
+  padding: 6px 10px 0 6px;
+  background: #17344e; }
   .demand.playlist .track-count span {
     margin-right: 3px;
     padding: 3px 8px;
     display: inline-block;
-    background: #048ec6;
+    background: white;
     border-radius: 3px;
     font-style: normal;
     font-weight: 400;
-    color: white; }
+    color: #17344e; }
 
 .demand.playlist .request-track {
   text-align: center;

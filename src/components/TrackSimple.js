@@ -37,7 +37,7 @@ class TrackSimple extends React.Component {
         <div className='track-artwork-big'>
           <img src={ track.album.images[0].url } alt={ track.album.name }/>
         </div>
-        <AnimateHeight duration={500} height={this.state.display ? 'auto' : '0'}>
+        <AnimateHeight duration={1000} height={this.state.display ? 'auto' : '0'}>
           <div className='track-content'>
             <img className='track-artwork' src={ track.album.images[0].url } alt={ track.album.name }/>
             <div className='track-details'>
