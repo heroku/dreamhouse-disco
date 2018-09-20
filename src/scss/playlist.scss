@@ -66,9 +66,10 @@
   }
 
   footer {
-    padding: 10px 15px 50px;
+    padding: 10px 15px;
     @include display(flex);
     @include justify-content(space-between);
+    @include align-items(center);
     background: #e7e7e7;
   }
 
@@ -92,10 +93,6 @@
     font-size: 20px;
 
     .sms-number {
-      margin-bottom: 5px;
-      padding-bottom: 5px;
-      border-bottom: 1px solid #ccc;
-
       span, strong {
         display: inline-block;
         vertical-align: middle;
