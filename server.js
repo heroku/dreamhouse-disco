@@ -3,7 +3,7 @@ const express = require('express')
 
 const app = express()
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 5000
 
 // Redirect all HTTP traffic to HTTPS in production
 if (process.env.NODE_ENV === 'production') {

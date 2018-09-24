@@ -12,8 +12,6 @@ import Music from './components/Music';
 import Logout from './components/Logout';
 import store from './store'
 
-
-
 import './style.css';
 
 const history = syncHistoryWithStore(hashHistory, store);

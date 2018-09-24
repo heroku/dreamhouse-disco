@@ -5,6 +5,8 @@
   "dependencies": {
     "axios": "^0.15.3",
     "lodash": "^4.17.2",
+    "node-neat": "^1.7.2",
+    "node-sass": "^4.9.3",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-player": "^0.12.1",
@@ -18,13 +20,20 @@
     "redux-promise-middleware": "^4.2.0",
     "redux-thunk": "^2.1.0"
   },
+  "devDependencies": {
+    "concurrently": "^4.0.1"
+  },
+  "proxy": "http://localhost:5000/",
   "scripts": {
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "yarn build",
     "start": "node server.js",
-    "start-dev": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "react-scripts start",
+    "build": "yarn build-sass && react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sass-build": "node-sass --include-path 'node_modules/bourbon-neat/app/assets/stylesheets' src/scss/style.scss --output src",
+    "sass": "node-sass --watch --include-path 'node_modules/bourbon-neat/app/assets/stylesheets'  src/scss/style.scss --output src",
+    "start-dev": "concurrently --kill-others-on-fail npm:start npm:dev npm:sass-build npm:sass"
   },
   "engines": {
     "node": "7.2.1"
