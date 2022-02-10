@@ -6,7 +6,7 @@
     "axios": "^0.15.3",
     "lodash": "^4.17.2",
     "node-neat": "^1.7.2",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "react-player": "^0.12.1",
